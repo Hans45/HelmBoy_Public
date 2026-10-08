@@ -1,0 +1,33 @@
+<map id="src/synthesis/value_switch.cpp" name="src/synthesis/value_switch.cpp">
+<area shape="rect" id="Node000001" title="A lightweight switch/value multiplexer that routes one of several input buffers to an output." alt="" coords="410,5,544,48"/>
+<area shape="rect" id="Node000002" href="$value__switch_8h.html" title="Header for ValueSwitch: routes one input buffer to output and enables processors." alt="" coords="232,96,340,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="425,50,331,92,329,87,430,47"/>
+<area shape="rect" id="Node000010" href="$utils_8h.html" title="Utilitaires mathématiques et helpers pour mopo (interpolation, buffers, conversions)." alt="" coords="448,96,505,123"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="478,46,479,81,474,79,475,51"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="675,171,732,197"/>
+<area shape="poly" id="edge17_Node000001_Node000012" title=" " alt="" coords="507,46,675,161,670,162,506,51"/>
+<area shape="rect" id="Node000003" href="$value_8h.html" title="Processeurs Value : constantes ou control&#45;rate values." alt="" coords="169,171,232,197"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="273,121,228,163,225,159,269,125"/>
+<area shape="rect" id="Node000004" href="$processor_8h.html" title="Définition de la classe Processor et des ports d&#39;entrée/sortie." alt="" coords="143,245,232,272"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="200,196,195,231,190,229,197,200"/>
+<area shape="rect" id="Node000005" href="$common_8h.html" title="Core definitions and constants for the mopo synthesis library." alt="" coords="461,320,543,347"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="233,268,448,318,444,321,232,273"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="157,320,218,347"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="189,271,190,306,185,303,186,274"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,320,63,347"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="162,275,76,315,74,310,160,270"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="242,320,301,347"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="203,270,248,310,243,310,201,275"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="87,320,133,347"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="176,272,136,311,133,307,171,274"/>
+<area shape="poly" id="edge11_Node000010_Node000003" title=" " alt="" coords="446,120,248,173,247,168,450,116"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="505,112,533,118,563,129,591,145,614,169,622,190,622,210,615,230,604,250,571,285,535,313,533,309,567,281,599,247,610,228,617,209,617,191,609,172,588,150,560,134,531,123,505,117"/>
+<area shape="poly" id="edge15_Node000010_Node000008" title=" " alt="" coords="446,112,413,118,372,127,331,145,313,157,297,172,280,203,271,239,268,274,270,306,265,303,263,274,266,238,275,201,293,169,310,153,328,140,370,122,412,113,451,110"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="307,171,428,197"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="460,122,400,164,397,160,455,124"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="506,117,662,168,657,169,505,122"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="452,171,501,197"/>
+<area shape="poly" id="edge14_Node000010_Node000013" title=" " alt="" coords="478,121,479,156,474,154,475,125"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="525,171,599,197"/>
+<area shape="poly" id="edge16_Node000010_Node000014" title=" " alt="" coords="492,121,539,161,533,160,491,126"/>
+</map>

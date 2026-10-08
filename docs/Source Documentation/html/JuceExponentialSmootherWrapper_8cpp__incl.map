@@ -1,0 +1,33 @@
+<map id="src/synthesis/JuceExponentialSmootherWrapper.cpp" name="src/synthesis/JuceExponentialSmootherWrapper.cpp">
+<area shape="rect" id="Node000001" title="Implementation of JUCE&#45;compatible exponential smoothing filter wrapper." alt="" coords="22,5,221,48"/>
+<area shape="rect" id="Node000002" href="$JuceExponentialSmootherWrapper_8h.html" title="JUCE&#45;aware exponential smoothing filter (mopo::Processor derivative)." alt="" coords="5,96,238,123"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="122,46,124,81,119,80,121,51"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="93,245,150,272"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="123,121,124,230,119,229,120,126"/>
+<area shape="rect" id="Node000004" href="$processor_8h.html" title="Définition de la classe Processor et des ports d&#39;entrée/sortie." alt="" coords="388,320,477,347"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="111,126,95,154,76,193,70,214,69,234,72,253,82,270,101,285,129,296,206,314,294,324,375,330,370,331,293,329,206,319,128,302,98,289,78,274,67,255,63,234,65,213,71,191,90,151,113,121"/>
+<area shape="rect" id="Node000010" href="$utils_8h.html" title="Utilitaires mathématiques et helpers pour mopo (interpolation, buffers, conversions)." alt="" coords="312,171,368,197"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="159,121,299,167,295,170,160,126"/>
+<area shape="rect" id="Node000005" href="$common_8h.html" title="Core definitions and constants for the mopo synthesis library." alt="" coords="586,395,668,421"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="467,345,581,389,576,389,466,350"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="319,395,380,421"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="420,346,376,387,374,382,415,348"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="404,395,461,421"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="434,345,434,381,430,377,430,349"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="174,395,234,421"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="395,347,249,395,248,390,390,347"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="486,395,531,421"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="446,345,487,385,482,383,444,350"/>
+<area shape="poly" id="edge14_Node000010_Node000003" title=" " alt="" coords="310,197,166,245,164,241,313,193"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="368,185,430,190,506,201,575,219,602,230,620,244,637,276,643,313,642,349,636,382,632,378,637,349,638,314,632,278,615,247,599,235,573,224,505,207,430,196,369,190"/>
+<area shape="poly" id="edge16_Node000010_Node000008" title=" " alt="" coords="309,192,261,210,236,226,216,247,201,279,196,315,197,349,200,381,196,378,191,350,191,314,196,278,211,244,232,222,258,205,314,189"/>
+<area shape="rect" id="Node000011" href="$value_8h.html" title="Processeurs Value : constantes ou control&#45;rate values." alt="" coords="542,245,605,272"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="369,191,529,242,524,244,369,197"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="225,245,346,272"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="333,196,306,235,302,231,329,200"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="370,245,420,272"/>
+<area shape="poly" id="edge15_Node000010_Node000013" title=" " alt="" coords="350,195,379,233,374,232,349,200"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="443,245,517,272"/>
+<area shape="poly" id="edge17_Node000010_Node000014" title=" " alt="" coords="365,195,445,237,439,238,364,201"/>
+<area shape="poly" id="edge12_Node000011_Node000004" title=" " alt="" coords="551,272,471,315,469,310,546,273"/>
+</map>

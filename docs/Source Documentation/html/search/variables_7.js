@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['hard_5fsync_5f_0',['hard_sync_',['../classOscillatorSection.html#a90254afba3b4524e06237582ad97f4f9',1,'OscillatorSection']]],
+  ['harmonics_1',['HARMONICS',['../classmopo_1_1FixedPointWaveLookup.html#a08cbcd26c15fcaed8f7c5544993b6163',1,'mopo::FixedPointWaveLookup']]],
+  ['has_5fdelay_5f_2',['has_delay_',['../classEnvelopeSection.html#a6693eaad4c2b34ccd38aaf9269dfa0ca',1,'EnvelopeSection']]],
+  ['has_5fmodulated_5fphase_5fstretch_5f_3',['has_modulated_phase_stretch_',['../classOpenGLWaveViewer.html#a159f43673cf691c246ee5343383ceca3',1,'OpenGLWaveViewer::has_modulated_phase_stretch_'],['../classWaveViewer.html#a0ea41bbcf9e841267389b381e36c2e23',1,'WaveViewer::has_modulated_phase_stretch_']]],
+  ['height_4',['height',['../structOpenGLEnvelope_1_1GeometrySnapshot.html#aea025212385944f369f4d7592613b836',1,'OpenGLEnvelope::GeometrySnapshot::height'],['../structOpenGLWaveViewer_1_1RenderGeometry.html#a42d2ba5847e85c7612aef516ded12f65',1,'OpenGLWaveViewer::RenderGeometry::height']]],
+  ['helm_5f_5',['helm_',['../classHelmEditor.html#aad7a2c2f781c00d4b2e89b9901950bee',1,'HelmEditor']]],
+  ['helm_5fprimary_5faccent_6',['helm_primary_accent',['../classColors.html#a9b117325aee4d448bf1994250d24dd15',1,'Colors']]],
+  ['helm_5fsecondary_5faccent_7',['helm_secondary_accent',['../classColors.html#a62360d18e537aa84b711994c617c0df0',1,'Colors']]],
+  ['helm_5ftertiary_5faccent_8',['helm_tertiary_accent',['../classColors.html#a7e5c2dc78804618ddf0f06b1261df020',1,'Colors']]],
+  ['hide_5fbutton_5f_9',['hide_button_',['../classPatchBrowser.html#a7416c0e0573dfe4ba39e5ea65b2869b1',1,'PatchBrowser']]],
+  ['high_5ffrequency_10',['HIGH_FREQUENCY',['../namespacemopo.html#aff60c32d72024f2bf7f2b1c5abe15476',1,'mopo']]],
+  ['high_5fpass_5f_11',['high_pass_',['../classFilterSelector.html#a3fe555fea6f39d370a471404dd53ab54',1,'FilterSelector::high_pass_'],['../classFilterSection.html#a18b300bc6ee33a403305fc94efba49a2',1,'FilterSection::high_pass_']]],
+  ['high_5fshelf_5f_12',['high_shelf_',['../classFilterSelector.html#a3b7f54a5183260b095d9ef2a68e7a0f8',1,'FilterSelector']]],
+  ['highlight_5foverlay_13',['highlight_overlay',['../classColors.html#ab3eb20d957b9a7cf56299f15af058d78',1,'Colors']]],
+  ['highlighted_5fstep_5f_14',['highlighted_step_',['../classGraphicalStepSequencer.html#afe16c099815407365c8136bf2a48418b',1,'GraphicalStepSequencer']]],
+  ['hold_5f_15',['hold_',['../classEnvelopeSection.html#a5be06ba3217eab0df50a1b48c77b1f44',1,'EnvelopeSection']]],
+  ['hold_5fcounters_5f_16',['hold_counters_',['../classmopo_1_1SwitchModulationProcessor.html#a0dc806066c5cbedd080c00ea6fd11848',1,'mopo::SwitchModulationProcessor']]],
+  ['hold_5fhover_5f_17',['hold_hover_',['../classOpenGLEnvelope.html#ab7c893588a78c120f3bee27354b2220e',1,'OpenGLEnvelope']]],
+  ['hold_5fslider_5f_18',['hold_slider_',['../classOpenGLEnvelope.html#aff7553c03b1d697e03bdc1666d918f80',1,'OpenGLEnvelope']]],
+  ['hold_5fx_19',['hold_x',['../structOpenGLEnvelope_1_1GeometrySnapshot.html#aee945156b9e0639c5e37f4e502c4dc9d',1,'OpenGLEnvelope::GeometrySnapshot']]],
+  ['horizontal_20',['horizontal',['../structOpenGLModulationMeter_1_1GeometrySnapshot.html#a54bdbf3cdb49ea0222d2a86e34ed0af7',1,'OpenGLModulationMeter::GeometrySnapshot']]]
+];

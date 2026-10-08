@@ -1,0 +1,11 @@
+<map id="OpenGLWaveViewer" name="OpenGLWaveViewer">
+<area shape="rect" id="Node000001" title=" " alt="" coords="177,389,357,1157"/>
+<area shape="rect" id="Node000002" href="$classOpenGLComponent.html" title="Base class for hardware&#45;accelerated OpenGL components." alt="" coords="5,123,160,341"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,352,180,509,174,509,124,358"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="44,5,122,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,87,85,123,80,123,83,92"/>
+<area shape="rect" id="Node000004" href="$classSynthSlider_1_1SliderListener.html" title=" " alt="" coords="184,155,349,309"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="267,321,269,390,264,389,266,326"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="373,197,417,267"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="384,279,359,394,354,392,383,284"/>
+</map>

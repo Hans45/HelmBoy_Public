@@ -1,0 +1,9 @@
+<map id="ModulationSlider" name="ModulationSlider">
+<area shape="rect" id="Node000001" title=" " alt="" coords="109,955,258,1152"/>
+<area shape="rect" id="Node000002" href="$classSynthSlider.html" title="Custom slider control for synthesis parameters." alt="" coords="5,123,194,907"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="164,919,171,955,166,954,163,924"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="78,5,122,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="100,87,102,123,97,123,100,92"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="219,480,317,549"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="263,563,202,955,196,954,258,564"/>
+</map>

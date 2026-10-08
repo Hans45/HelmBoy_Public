@@ -1,0 +1,17 @@
+<map id="OpenGLModulationManager" name="OpenGLModulationManager">
+<area shape="rect" id="Node000001" title=" " alt="" coords="348,389,549,949"/>
+<area shape="rect" id="Node000002" href="$classOpenGLComponent.html" title="Base class for hardware&#45;accelerated OpenGL components." alt="" coords="5,123,160,341"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,336,174,340,350,549,345,551,170,343,171,341"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="44,5,122,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="83,87,85,123,80,123,83,92"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="185,197,282,267"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="257,277,351,465,345,465,256,283"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="306,197,409,267"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="368,278,393,390,387,389,367,284"/>
+<area shape="rect" id="Node000006" href="$classModulationButton_1_1ModulationDisconnectListener.html" title=" " alt="" coords="433,179,648,285"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="527,298,510,391,505,388,525,302"/>
+<area shape="rect" id="Node000007" href="$classSynthSlider_1_1SliderListener.html" title=" " alt="" coords="671,155,836,309"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="693,320,551,527,546,523,690,323"/>
+<area shape="rect" id="Node000008" href="$classSynthButton_1_1ButtonListener.html" title=" " alt="" coords="860,165,1034,299"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="882,307,850,343,695,479,550,595,547,590,691,475,846,339,878,311"/>
+</map>

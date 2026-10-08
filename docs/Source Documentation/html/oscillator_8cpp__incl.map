@@ -1,0 +1,40 @@
+<map id="mopo/src/oscillator.cpp" name="mopo/src/oscillator.cpp">
+<area shape="rect" id="Node000001" title="Implementation of the oscillator processor creating band&#45;limited waveforms and exposing phase output." alt="" coords="5,5,162,32"/>
+<area shape="rect" id="Node000002" href="$oscillator_8h.html" title="Oscillateur (génération de formes d&#39;onde band&#45;limited)." alt="" coords="423,80,507,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,30,409,79,406,83,151,35"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="64,304,122,331"/>
+<area shape="poly" id="edge23_Node000001_Node000013" title=" " alt="" coords="86,31,95,289,89,288,82,34"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="506,304,626,331"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="472,105,557,290,552,290,469,109"/>
+<area shape="rect" id="Node000004" href="$processor_8h.html" title="Définition de la classe Processor et des ports d&#39;entrée/sortie." alt="" coords="342,379,431,405"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="487,105,547,143,580,170,612,199,637,231,653,265,656,299,650,316,640,332,627,343,609,353,559,369,447,387,446,382,558,363,607,348,624,339,636,329,646,314,650,298,648,266,633,234,608,203,577,174,544,148,487,110"/>
+<area shape="rect" id="Node000010" href="$wave_8h.html" title="Génération de formes d&#39;onde et tables de lookup band&#45;limited pour mopo." alt="" coords="221,155,284,181"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="426,109,301,153,298,149,430,106"/>
+<area shape="rect" id="Node000005" href="$common_8h.html" title="Core definitions and constants for the mopo synthesis library." alt="" coords="166,453,249,480"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="358,405,254,450,252,445,352,406"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="273,453,334,480"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="374,405,330,445,328,441,369,407"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="358,453,415,480"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="388,404,388,439,384,436,384,408"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="508,453,568,480"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="413,403,500,446,495,446,412,408"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="440,453,485,480"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="400,403,441,443,436,442,398,408"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="219,181,180,199,133,225,88,260,69,281,54,305,48,327,50,348,61,368,77,386,119,419,166,446,161,447,117,424,73,390,56,371,45,349,42,327,49,303,65,278,84,256,130,220,178,194,223,178"/>
+<area shape="poly" id="edge21_Node000010_Node000008" title=" " alt="" coords="284,167,361,172,409,179,460,191,511,208,560,231,604,263,640,303,649,322,650,342,644,362,634,382,603,417,570,446,568,441,600,413,629,379,640,360,645,341,644,323,636,305,600,267,557,236,509,213,458,196,408,184,360,177,286,172"/>
+<area shape="rect" id="Node000011" href="$utils_8h.html" title="Utilitaires mathématiques et helpers pour mopo (interpolation, buffers, conversions)." alt="" coords="259,229,316,256"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="259,179,278,215,272,215,258,184"/>
+<area shape="poly" id="edge20_Node000010_Node000013" title=" " alt="" coords="238,184,120,295,116,291,240,179"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="145,304,219,331"/>
+<area shape="poly" id="edge22_Node000010_Node000015" title=" " alt="" coords="249,180,197,291,193,288,245,184"/>
+<area shape="poly" id="edge15_Node000011_Node000003" title=" " alt="" coords="316,249,505,298,500,301,316,254"/>
+<area shape="poly" id="edge12_Node000011_Node000005" title=" " alt="" coords="286,256,219,440,215,437,280,257"/>
+<area shape="poly" id="edge18_Node000011_Node000008" title=" " alt="" coords="316,246,379,265,414,281,445,302,475,334,500,371,531,440,527,438,495,373,471,337,442,306,411,285,377,270,316,252"/>
+<area shape="rect" id="Node000012" href="$value_8h.html" title="Processeurs Value : constantes ou control&#45;rate values." alt="" coords="368,304,431,331"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="307,254,370,295,365,296,307,259"/>
+<area shape="poly" id="edge16_Node000011_Node000013" title=" " alt="" coords="257,257,137,303,134,298,260,252"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="295,304,344,331"/>
+<area shape="poly" id="edge17_Node000011_Node000014" title=" " alt="" coords="294,254,311,290,305,289,292,259"/>
+<area shape="poly" id="edge19_Node000011_Node000015" title=" " alt="" coords="267,258,215,297,211,293,271,255"/>
+<area shape="poly" id="edge14_Node000012_Node000004" title=" " alt="" coords="399,329,393,365,389,362,395,333"/>
+</map>

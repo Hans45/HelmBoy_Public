@@ -1,0 +1,25 @@
+<map id="RetriggerSelector" name="RetriggerSelector">
+<area shape="rect" id="Node000001" title=" " alt="" coords="148,2344,281,2499"/>
+<area shape="rect" id="Node000002" href="$classSynthSlider.html" title="Custom slider control for synthesis parameters." alt="" coords="120,1553,309,2295"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,2307,217,2345,212,2343,213,2312"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="85,1191,129,1260"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,1272,144,1481,155,1554,150,1554,139,1482,113,1277"/>
+<area shape="rect" id="Node000004" href="$structmopo_1_1ValueDetails.html" title=" " alt="" coords="153,1084,277,1367"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="215,1364,217,1536,212,1536,214,1369"/>
+<area shape="rect" id="Node000005" href="$classFullInterface.html" title=" " alt="" coords="301,969,478,1481"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="326,1478,314,1537,309,1536,325,1483"/>
+<area shape="rect" id="Node000006" href="$classSynthSection.html" title="Base class for all synthesizer UI sections." alt="" coords="126,188,310,897"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="311,909,328,969,322,970,311,914"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="5,37,83,107"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="61,118,128,293,123,294,62,124"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="107,37,205,107"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="162,119,174,188,169,189,163,124"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="229,37,332,107"/>
+<area shape="poly" id="edge8_Node000006_Node000009" title=" " alt="" coords="273,124,267,189,262,188,274,119"/>
+<area shape="rect" id="Node000010" href="$classSynthButton_1_1ButtonListener.html" title=" " alt="" coords="356,5,530,139"/>
+<area shape="poly" id="edge9_Node000006_Node000010" title=" " alt="" coords="350,152,324,189,312,210,307,208,319,187,352,147"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="334,508,445,577"/>
+<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="390,590,392,970,387,969,389,595"/>
+<area shape="rect" id="Node000012" href="$classOpenGLBackground.html" title=" " alt="" coords="470,265,646,820"/>
+<area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="490,817,459,953,454,952,489,822"/>
+</map>

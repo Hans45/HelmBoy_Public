@@ -1,0 +1,118 @@
+<map id="src/editor_components/overlay.h" name="src/editor_components/overlay.h">
+<area shape="rect" id="Node000001" title="Composant overlay réutilisable pour afficher panneaux modaux/overlays." alt="" coords="4616,5,4770,48"/>
+<area shape="rect" id="Node000002" href="$about__section_8h.html" title="UI overlay that displays application information, links and settings." alt="" coords="1060,459,1192,501"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="4598,29,3981,43,3544,54,3085,71,2648,94,2279,125,2135,143,2025,163,1955,185,1937,196,1931,207,1931,300,1925,328,1907,353,1879,374,1842,393,1797,410,1747,424,1633,447,1510,462,1388,472,1193,481,1192,475,1388,467,1509,457,1632,441,1746,419,1796,405,1840,388,1876,370,1903,349,1920,326,1926,300,1926,206,1933,192,1952,180,2023,157,2134,137,2279,119,2647,89,3085,66,3544,49,3981,37,4603,29"/>
+<area shape="rect" id="Node000004" href="$full__interface_8h.html" title="Main synthesizer interface integrating all UI components." alt="" coords="1060,549,1192,592"/>
+<area shape="poly" id="edge64_Node000001_Node000004" title=" " alt="" coords="4598,35,4357,60,4060,97,3923,120,3810,147,3766,161,3733,176,3713,192,3706,207,3706,391,3699,404,3681,416,3613,438,3507,457,3368,475,3016,505,2599,528,2164,546,1755,559,1193,571,1192,566,1755,553,2164,541,2599,523,3015,499,3368,470,3506,452,3612,433,3679,412,3695,401,3701,390,3701,206,3709,188,3731,172,3764,156,3808,142,3922,115,4059,92,4356,55,4603,35"/>
+<area shape="rect" id="Node000038" href="$delete__section_8h.html" title="Overlay used to confirm deletion of patches or folders." alt="" coords="4704,96,4836,139"/>
+<area shape="poly" id="edge46_Node000001_Node000038" title=" " alt="" coords="4722,57,4755,97,4750,95,4720,62"/>
+<area shape="rect" id="Node000043" href="$patch__browser_8h.html" title="File browser overlay for managing patches (load, import, export)." alt="" coords="4671,368,4802,411"/>
+<area shape="poly" id="edge65_Node000001_Node000043" title=" " alt="" coords="4685,61,4675,115,4667,180,4669,251,4675,286,4685,319,4699,344,4717,369,4712,367,4694,347,4680,321,4669,287,4663,251,4662,180,4670,114,4681,65"/>
+<area shape="rect" id="Node000045" href="$save__section_8h.html" title="Overlay used to save patches and create banks/folders." alt="" coords="4970,277,5101,320"/>
+<area shape="poly" id="edge66_Node000001_Node000045" title=" " alt="" coords="4785,47,4844,67,4906,96,4965,135,4991,159,5014,185,5026,208,5034,232,5038,279,5034,275,5028,233,5021,210,5009,188,4987,162,4962,139,4904,101,4842,72,4785,52"/>
+<area shape="rect" id="Node000047" href="$splash__screen_8h.html" title=" " alt="" coords="5178,96,5309,139"/>
+<area shape="poly" id="edge67_Node000001_Node000047" title=" " alt="" coords="4785,40,5180,105,5175,105,4785,45"/>
+<area shape="rect" id="Node000003" href="$about__section_8cpp.html" title="Implementation of the AboutSection overlay UI." alt="" coords="1108,837,1240,880"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1042,484,930,492,787,504,632,523,482,551,415,569,355,590,306,614,268,641,245,672,240,689,238,706,241,725,249,744,280,787,296,798,323,807,404,823,514,835,640,843,903,852,1111,857,1105,857,903,858,640,849,513,840,403,828,321,812,293,802,276,791,244,747,236,726,233,706,234,688,240,670,265,638,303,610,353,585,413,564,481,546,631,518,786,499,930,487,1047,483"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="1128,515,1128,551,1124,547,1125,519"/>
+<area shape="rect" id="Node000005" href="$synth__gui__interface_8h.html" title="Interface between synth core and the GUI / full interface." alt="" coords="2410,640,2563,683"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1207,575,2411,653,2407,657,1207,580"/>
+<area shape="rect" id="Node000019" href="$synth__button_8cpp.html" title=" " alt="" coords="291,739,444,781"/>
+<area shape="poly" id="edge39_Node000004_Node000019" title=" " alt="" coords="1042,585,908,610,752,643,603,685,456,733,433,741,431,736,455,728,602,680,751,637,907,605,1047,583"/>
+<area shape="rect" id="Node000020" href="$synth__slider_8cpp.html" title=" " alt="" coords="468,739,622,781"/>
+<area shape="poly" id="edge40_Node000004_Node000020" title=" " alt="" coords="1048,592,878,643,726,694,599,741,598,736,724,689,876,637,1043,593"/>
+<area shape="rect" id="Node000023" href="$full__interface_8cpp.html" title="Implementation of the top&#45;level FullInterface UI component." alt="" coords="646,739,777,781"/>
+<area shape="poly" id="edge41_Node000004_Node000023" title=" " alt="" coords="1069,598,758,741,756,736,1064,599"/>
+<area shape="rect" id="Node000024" href="$modulation__manager_8cpp.html" title="Implementation of modulation manager: highlights, meters and sliders." alt="" coords="801,739,971,781"/>
+<area shape="poly" id="edge42_Node000004_Node000024" title=" " alt="" coords="1091,601,914,740,911,736,1086,602"/>
+<area shape="rect" id="Node000025" href="$open__gl__modulation__manager_8cpp.html" title="Implementation of OpenGLModulationManager (OpenGL visualization of modulations)." alt="" coords="996,731,1136,789"/>
+<area shape="poly" id="edge43_Node000004_Node000025" title=" " alt="" coords="1109,604,1094,641,1081,688,1072,732,1068,728,1076,687,1089,639,1105,607"/>
+<area shape="rect" id="Node000031" href="$plugin_2helmBoy__editor_8h.html" title=" " alt="" coords="83,739,215,781"/>
+<area shape="poly" id="edge44_Node000004_Node000031" title=" " alt="" coords="1043,580,841,604,719,621,597,643,388,692,216,741,214,736,387,687,596,637,718,616,841,599,1048,578"/>
+<area shape="rect" id="Node000034" href="$standalone_2helmBoy__editor_8h.html" title=" " alt="" coords="4475,739,4636,781"/>
+<area shape="poly" id="edge45_Node000004_Node000034" title=" " alt="" coords="1207,573,2574,637,2863,647,3107,648,3523,644,3723,647,3937,659,4179,685,4464,728,4498,738,4493,738,4463,733,4179,690,3937,664,3723,652,3523,649,3107,653,2862,652,2574,643,1207,578"/>
+<area shape="rect" id="Node000037" href="$open__gl__component_8cpp.html" title=" " alt="" coords="1103,640,1269,683"/>
+<area shape="poly" id="edge38_Node000004_Node000037" title=" " alt="" coords="1150,602,1175,641,1170,639,1148,607"/>
+<area shape="poly" id="edge22_Node000005_Node000003" title=" " alt="" coords="2391,665,2092,675,1706,688,1365,707,1252,720,1218,726,1201,733,1184,756,1176,783,1173,812,1173,839,1169,835,1168,812,1170,782,1180,753,1198,729,1216,721,1252,714,1364,702,1705,683,2092,669,2396,664"/>
+<area shape="rect" id="Node000006" href="$synth__base_8cpp.html" title=" " alt="" coords="3689,747,3878,773"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="2578,659,2778,660,3051,669,3363,690,3522,707,3677,728,3746,746,3741,746,3676,733,3521,712,3362,695,3051,675,2778,666,2579,664"/>
+<area shape="rect" id="Node000007" href="$synth__gui__interface_8cpp.html" title=" " alt="" coords="3903,739,4056,781"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="2578,661,2862,667,3241,680,3617,699,3772,712,3891,728,3924,738,3919,738,3890,733,3772,718,3616,705,3241,685,2862,673,2578,667"/>
+<area shape="rect" id="Node000008" href="$bpm__slider_8cpp.html" title=" " alt="" coords="4080,739,4234,781"/>
+<area shape="poly" id="edge7_Node000005_Node000008" title=" " alt="" coords="2578,661,2894,665,3324,677,3754,697,3933,711,4068,728,4101,738,4096,738,4067,733,3932,716,3754,702,3324,682,2894,671,2578,666"/>
+<area shape="rect" id="Node000009" href="$button__modulation__slider_8cpp.html" title=" " alt="" coords="4257,739,4451,781"/>
+<area shape="poly" id="edge8_Node000005_Node000009" title=" " alt="" coords="2579,661,2926,666,3408,678,3891,698,4093,712,4245,728,4286,738,4280,738,4244,733,4092,717,3891,703,3407,683,2926,672,2579,666"/>
+<area shape="rect" id="Node000010" href="$graphical__step__sequencer_8cpp.html" title=" " alt="" coords="1212,739,1414,781"/>
+<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="2391,663,2215,669,1974,679,1700,700,1561,715,1425,733,1388,741,1387,735,1424,728,1561,709,1700,694,1973,674,2215,664,2397,663"/>
+<area shape="rect" id="Node000011" href="$modulation__button_8cpp.html" title=" " alt="" coords="1437,739,1594,781"/>
+<area shape="poly" id="edge10_Node000005_Node000011" title=" " alt="" coords="2392,663,2243,669,2046,680,1826,700,1714,715,1605,733,1575,741,1574,735,1604,728,1713,709,1825,695,2046,674,2243,664,2397,663"/>
+<area shape="rect" id="Node000012" href="$modulation__meter_8cpp.html" title=" " alt="" coords="1618,739,1771,781"/>
+<area shape="poly" id="edge11_Node000005_Node000012" title=" " alt="" coords="2392,666,2272,674,2119,686,1951,705,1783,733,1753,741,1752,735,1782,728,1950,700,2118,681,2272,669,2397,665"/>
+<area shape="rect" id="Node000013" href="$open__gl__envelope_8cpp.html" title=" " alt="" coords="1794,739,1949,781"/>
+<area shape="poly" id="edge12_Node000005_Node000013" title=" " alt="" coords="2396,669,2194,694,2077,711,1961,733,1933,741,1932,735,1960,728,2076,706,2194,689,2391,670"/>
+<area shape="rect" id="Node000014" href="$open__gl__modulation__meter_8cpp.html" title=" " alt="" coords="1973,739,2178,781"/>
+<area shape="poly" id="edge13_Node000005_Node000014" title=" " alt="" coords="2397,683,2191,733,2160,741,2159,735,2190,728,2392,684"/>
+<area shape="rect" id="Node000015" href="$open__gl__peak__meter_8cpp.html" title=" " alt="" coords="2202,739,2373,781"/>
+<area shape="poly" id="edge14_Node000005_Node000015" title=" " alt="" coords="2433,689,2331,741,2329,736,2427,690"/>
+<area shape="rect" id="Node000016" href="$open__gl__wave__viewer_8cpp.html" title=" " alt="" coords="2397,739,2575,781"/>
+<area shape="poly" id="edge15_Node000005_Node000016" title=" " alt="" coords="2488,696,2488,740,2484,737,2484,700"/>
+<area shape="rect" id="Node000017" href="$patch__selector_8cpp.html" title=" " alt="" coords="4660,739,4814,781"/>
+<area shape="poly" id="edge16_Node000005_Node000017" title=" " alt="" coords="2578,660,2995,660,3594,668,3908,676,4203,688,4457,705,4648,728,4682,738,4677,738,4647,733,4456,711,4202,693,3908,681,3594,673,2995,665,2578,665"/>
+<area shape="rect" id="Node000018" href="$retrigger__selector_8cpp.html" title=" " alt="" coords="2599,739,2752,781"/>
+<area shape="poly" id="edge17_Node000005_Node000018" title=" " alt="" coords="2541,687,2638,739,2632,738,2540,693"/>
+<area shape="poly" id="edge18_Node000005_Node000019" title=" " alt="" coords="2392,665,1358,690,788,710,579,721,456,733,425,741,423,736,455,728,579,716,787,705,1358,685,2397,664"/>
+<area shape="poly" id="edge19_Node000005_Node000020" title=" " alt="" coords="2391,665,1448,692,933,711,746,722,635,733,604,741,602,735,634,728,745,717,933,706,1448,687,2397,664"/>
+<area shape="rect" id="Node000021" href="$tempo__selector_8cpp.html" title=" " alt="" coords="2776,739,2930,781"/>
+<area shape="poly" id="edge20_Node000005_Node000021" title=" " alt="" coords="2578,681,2764,728,2792,738,2786,738,2763,733,2578,686"/>
+<area shape="rect" id="Node000022" href="$wave__viewer_8cpp.html" title=" " alt="" coords="2954,739,3107,781"/>
+<area shape="poly" id="edge21_Node000005_Node000022" title=" " alt="" coords="2578,670,2748,692,2845,708,2941,728,2972,738,2966,738,2940,733,2844,714,2747,697,2578,675"/>
+<area shape="poly" id="edge23_Node000005_Node000023" title=" " alt="" coords="2391,663,2057,668,1593,677,1353,685,1128,697,935,713,789,733,762,741,761,735,788,728,934,708,1128,692,1352,680,1593,671,2057,662,2397,662"/>
+<area shape="poly" id="edge24_Node000005_Node000024" title=" " alt="" coords="2391,664,2093,673,1685,685,1280,705,1111,718,984,733,950,741,949,735,983,728,1111,712,1279,699,1685,680,2092,667,2397,664"/>
+<area shape="poly" id="edge25_Node000005_Node000025" title=" " alt="" coords="2391,665,2124,674,1766,686,1413,706,1267,718,1156,733,1137,737,1136,732,1155,728,1266,713,1413,700,1766,681,2124,668,2396,664"/>
+<area shape="rect" id="Node000026" href="$patch__browser_8cpp.html" title="Implementation of the PatchBrowser overlay used to load and manage patches." alt="" coords="4837,739,4972,781"/>
+<area shape="poly" id="edge26_Node000005_Node000026" title=" " alt="" coords="2578,661,3069,668,3770,681,4437,701,4681,713,4825,728,4856,738,4851,738,4824,733,4681,719,4437,706,3770,686,3069,673,2578,666"/>
+<area shape="rect" id="Node000027" href="$save__section_8cpp.html" title="Implementation of the SaveSection overlay used to save patches." alt="" coords="4996,739,5128,781"/>
+<area shape="poly" id="edge27_Node000005_Node000027" title=" " alt="" coords="2578,661,3099,666,3850,679,4567,699,4830,712,4985,728,5015,738,5010,738,4984,733,4830,718,4567,704,3850,684,3099,672,2578,666"/>
+<area shape="rect" id="Node000028" href="$synth__section_8cpp.html" title="Implementation of the SynthSection base UI class." alt="" coords="3131,739,3262,781"/>
+<area shape="poly" id="edge28_Node000005_Node000028" title=" " alt="" coords="2578,663,2689,670,2824,682,2972,701,3119,728,3147,738,3142,738,3118,733,2971,706,2824,687,2688,675,2578,668"/>
+<area shape="rect" id="Node000029" href="$synthesis__interface_8cpp.html" title="Implementation of the SynthesisInterface UI orchestration." alt="" coords="3287,739,3450,781"/>
+<area shape="poly" id="edge29_Node000005_Node000029" title=" " alt="" coords="2579,662,2715,668,2889,679,3082,699,3275,728,3308,738,3303,738,3274,733,3081,704,2888,684,2715,673,2579,667"/>
+<area shape="rect" id="Node000030" href="$modulation__look__and__feel_8cpp.html" title=" " alt="" coords="3475,739,3665,781"/>
+<area shape="poly" id="edge30_Node000005_Node000030" title=" " alt="" coords="2578,661,2745,665,2965,676,3213,696,3339,710,3463,728,3501,738,3496,738,3462,733,3339,715,3213,701,2965,681,2745,670,2578,666"/>
+<area shape="poly" id="edge31_Node000005_Node000031" title=" " alt="" coords="2392,666,1269,693,643,713,414,723,278,733,216,744,215,739,278,728,414,718,643,708,1269,688,2397,663"/>
+<area shape="poly" id="edge34_Node000005_Node000034" title=" " alt="" coords="2578,662,3588,686,4142,706,4344,717,4464,728,4498,738,4493,738,4463,733,4344,722,4141,711,3588,691,2579,667"/>
+<area shape="rect" id="Node000032" href="$plugin_2helmBoy__editor_8cpp.html" title=" " alt="" coords="5,837,138,880"/>
+<area shape="poly" id="edge32_Node000031_Node000032" title=" " alt="" coords="125,792,90,839,86,835,120,795"/>
+<area shape="rect" id="Node000033" href="$helmBoy__plugin_8cpp.html" title=" " alt="" coords="161,837,294,880"/>
+<area shape="poly" id="edge33_Node000031_Node000033" title=" " alt="" coords="176,791,214,837,208,837,174,796"/>
+<area shape="poly" id="edge35_Node000034_Node000003" title=" " alt="" coords="4484,785,4464,792,4378,801,4249,810,3883,824,3414,836,2892,845,1882,856,1240,860,1240,854,1882,850,2892,839,3414,831,3883,819,4248,805,4378,796,4463,787,4479,786"/>
+<area shape="rect" id="Node000035" href="$standalone_2helmBoy__editor_8cpp.html" title=" " alt="" coords="4475,837,4636,880"/>
+<area shape="poly" id="edge36_Node000034_Node000035" title=" " alt="" coords="4557,795,4557,839,4554,835,4554,799"/>
+<area shape="rect" id="Node000036" href="$main_8cpp.html" title=" " alt="" coords="4871,845,5034,872"/>
+<area shape="poly" id="edge37_Node000034_Node000036" title=" " alt="" coords="4636,783,4648,787,4777,818,4893,845,4887,845,4776,823,4647,792,4635,789"/>
+<area shape="rect" id="Node000039" href="$border__bounds__constrainer_8h.html" title="Constrains window/component bounds within configurable borders." alt="" coords="5074,187,5256,229"/>
+<area shape="poly" id="edge47_Node000038_Node000039" title=" " alt="" coords="4851,134,5076,186,5070,186,4851,139"/>
+<area shape="rect" id="Node000041" href="$file__list__box__model_8h.html" title="List model used to display and manage patch/bank files in the GUI." alt="" coords="4861,187,4999,229"/>
+<area shape="poly" id="edge50_Node000038_Node000041" title=" " alt="" coords="4821,144,4896,187,4890,186,4820,149"/>
+<area shape="poly" id="edge63_Node000038_Node000043" title=" " alt="" coords="4725,147,4707,168,4694,188,4686,211,4684,236,4692,286,4708,331,4726,369,4722,366,4703,333,4686,287,4679,236,4681,210,4689,186,4703,164,4720,150"/>
+<area shape="rect" id="Node000046" href="$delete__section_8cpp.html" title="Implementation of the DeleteSection overlay." alt="" coords="4703,187,4837,229"/>
+<area shape="poly" id="edge62_Node000038_Node000046" title=" " alt="" coords="4772,152,4772,188,4768,185,4768,156"/>
+<area shape="poly" id="edge49_Node000039_Node000036" title=" " alt="" coords="5167,243,5168,388,5167,663,5169,731,5162,760,5142,791,5119,812,5092,828,5035,849,5034,843,5090,823,5116,808,5137,788,5157,758,5164,731,5162,663,5162,388,5163,247"/>
+<area shape="rect" id="Node000040" href="$border__bounds__constrainer_8cpp.html" title=" " alt="" coords="5202,277,5384,320"/>
+<area shape="poly" id="edge48_Node000039_Node000040" title=" " alt="" coords="5207,236,5265,277,5260,276,5206,241"/>
+<area shape="rect" id="Node000042" href="$file__list__box__model_8cpp.html" title=" " alt="" coords="4754,277,4893,320"/>
+<area shape="poly" id="edge51_Node000041_Node000042" title=" " alt="" coords="4896,238,4850,279,4847,274,4892,240"/>
+<area shape="poly" id="edge52_Node000041_Node000043" title=" " alt="" coords="4932,243,4926,284,4918,304,4907,322,4885,342,4859,358,4804,379,4802,374,4856,354,4881,338,4903,318,4914,302,4921,283,4928,247"/>
+<area shape="poly" id="edge59_Node000041_Node000045" title=" " alt="" coords="4967,237,5013,277,5008,276,4966,242"/>
+<area shape="poly" id="edge57_Node000043_Node000004" title=" " alt="" coords="4658,402,4255,454,3991,482,3722,504,3337,526,2944,543,2191,564,1571,571,1193,572,1192,567,1571,566,2191,559,2944,538,3337,521,3722,499,3991,476,4255,449,4653,402"/>
+<area shape="poly" id="edge58_Node000043_Node000026" title=" " alt="" coords="4787,417,4809,436,4827,457,4848,494,4865,533,4889,613,4901,686,4906,740,4902,737,4896,686,4883,614,4860,535,4843,496,4823,460,4805,439,4785,422"/>
+<area shape="rect" id="Node000044" href="$patch__selector_8h.html" title="Interface principale de sélection et gestion de patches (load/save/browse)." alt="" coords="4660,459,4814,501"/>
+<area shape="poly" id="edge53_Node000043_Node000044" title=" " alt="" coords="4739,424,4739,460,4735,457,4735,428"/>
+<area shape="poly" id="edge55_Node000044_Node000004" title=" " alt="" coords="4642,485,4208,504,3272,529,2369,549,1192,571,1192,566,2369,544,3272,524,4207,499,4647,485"/>
+<area shape="poly" id="edge54_Node000044_Node000017" title=" " alt="" coords="4739,515,4739,740,4735,736,4735,519"/>
+<area shape="poly" id="edge56_Node000044_Node000026" title=" " alt="" coords="4758,512,4895,739,4890,737,4756,517"/>
+<area shape="poly" id="edge61_Node000045_Node000027" title=" " alt="" coords="5041,333,5048,402,5051,479,5051,572,5056,665,5062,740,5058,737,5050,665,5046,572,5046,479,5043,402,5038,337"/>
+<area shape="poly" id="edge60_Node000045_Node000043" title=" " alt="" coords="4957,323,4803,371,4802,366,4952,324"/>
+<area shape="rect" id="Node000048" href="$splash__screen_8cpp.html" title=" " alt="" coords="5280,187,5415,229"/>
+<area shape="poly" id="edge68_Node000047_Node000048" title=" " alt="" coords="5280,146,5326,187,5321,185,5278,151"/>
+</map>

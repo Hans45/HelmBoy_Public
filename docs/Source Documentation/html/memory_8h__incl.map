@@ -1,0 +1,36 @@
+<map id="mopo/src/memory.h" name="mopo/src/memory.h">
+<area shape="rect" id="Node000001" title="Buffer circulaire thread&#45;safe pour stockage de samples." alt="" coords="442,5,578,32"/>
+<area shape="rect" id="Node000002" href="$common_8h.html" title="Core definitions and constants for the mopo synthesis library." alt="" coords="82,304,165,331"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="439,29,330,48,202,74,140,91,87,110,45,132,18,156,9,174,9,193,15,211,26,230,58,265,94,294,89,296,55,269,22,233,10,214,4,193,4,173,13,153,42,128,85,105,139,86,200,69,329,42,444,27"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="668,80,742,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="544,30,659,74,654,75,544,35"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="767,80,827,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="564,30,754,79,749,80,564,35"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="28,155,86,181"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="468,34,322,83,102,155,99,150,320,77,472,31"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="600,304,660,331"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="523,30,566,82,589,116,607,154,619,189,626,225,632,290,627,287,621,226,614,190,602,156,584,119,561,85,521,35"/>
+<area shape="rect" id="Node000007" href="$utils_8h.html" title="Utilitaires mathématiques et helpers pour mopo (interpolation, buffers, conversions)." alt="" coords="333,80,389,107"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="482,34,402,75,400,70,486,31"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="330,103,225,130,176,145,151,157,132,187,123,223,121,258,122,290,117,288,115,258,118,222,128,185,147,153,174,140,224,125,334,99"/>
+<area shape="poly" id="edge16_Node000007_Node000005" title=" " alt="" coords="331,104,105,157,102,158,99,154,104,152,333,99"/>
+<area shape="rect" id="Node000008" href="$value_8h.html" title="Processeurs Value : constantes ou control&#45;rate values." alt="" coords="529,155,593,181"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="390,102,517,149,512,151,389,108"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="363,304,423,331"/>
+<area shape="poly" id="edge18_Node000007_Node000011" title=" " alt="" coords="365,105,392,290,386,288,361,109"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="161,155,281,181"/>
+<area shape="poly" id="edge15_Node000007_Node000013" title=" " alt="" coords="334,109,260,149,258,145,339,106"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="306,155,355,181"/>
+<area shape="poly" id="edge17_Node000007_Node000014" title=" " alt="" coords="357,105,344,142,339,139,354,109"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="430,155,505,181"/>
+<area shape="poly" id="edge19_Node000007_Node000015" title=" " alt="" coords="380,105,439,145,434,146,379,110"/>
+<area shape="rect" id="Node000009" href="$processor_8h.html" title="Définition de la classe Processor et des ports d&#39;entrée/sortie." alt="" coords="466,229,555,256"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="554,180,529,219,526,215,550,183"/>
+<area shape="poly" id="edge10_Node000009_Node000002" title=" " alt="" coords="466,255,180,308,179,303,465,250"/>
+<area shape="poly" id="edge11_Node000009_Node000006" title=" " alt="" coords="532,254,599,296,594,295,530,259"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="518,304,575,331"/>
+<area shape="poly" id="edge12_Node000009_Node000010" title=" " alt="" coords="518,254,536,291,531,289,515,259"/>
+<area shape="poly" id="edge13_Node000009_Node000011" title=" " alt="" coords="492,256,427,298,425,293,487,257"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="448,304,493,331"/>
+<area shape="poly" id="edge14_Node000009_Node000012" title=" " alt="" coords="506,255,486,292,483,288,501,258"/>
+</map>

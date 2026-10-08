@@ -1,0 +1,15 @@
+<map id="FileListBoxModel" name="FileListBoxModel">
+<area shape="rect" id="Node000001" title="Model powering the file browser list used in the patch browser UI." alt="" coords="113,768,289,1168"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,499,95,568"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,579,109,695,134,768,129,768,104,697,66,584"/>
+<area shape="rect" id="Node000003" href="$classFileListBoxModel_1_1Listener.html" title=" " alt="" coords="118,488,283,579"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,576,203,752,198,751,200,581"/>
+<area shape="rect" id="Node000004" href="$classDeleteSection.html" title=" " alt="" coords="307,371,466,696"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="318,693,295,753,291,751,316,698"/>
+<area shape="rect" id="Node000005" href="$classOverlay.html" title=" " alt="" coords="231,124,352,321"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="326,333,339,371,334,371,326,338"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="253,5,330,75"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="292,87,294,125,289,124,291,92"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="376,188,479,257"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="422,269,410,372,405,370,420,274"/>
+</map>

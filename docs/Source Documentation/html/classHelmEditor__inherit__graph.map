@@ -1,0 +1,7 @@
+<map id="HelmEditor" name="HelmEditor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="50,443,276,747"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,165,142,235"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="86,247,131,443,126,443,84,251"/>
+<area shape="rect" id="Node000003" href="$classSynthGuiInterface.html" title="Glue code exposing the synthesizer to the GUI layer." alt="" coords="167,5,341,395"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="207,407,200,444,195,442,204,412"/>
+</map>

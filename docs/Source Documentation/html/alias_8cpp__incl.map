@@ -1,0 +1,34 @@
+<map id="mopo/src/alias.cpp" name="mopo/src/alias.cpp">
+<area shape="rect" id="Node000001" title="Simple aliasing processor (used to produce aliasing artefacts)." alt="" coords="112,5,243,32"/>
+<area shape="rect" id="Node000002" href="$alias_8h.html" title="Processeur de delay simple avec interpolation (aliasing control)." alt="" coords="107,80,166,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,35,153,68,148,65,172,30"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="190,80,250,107"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="185,30,208,66,203,67,185,35"/>
+<area shape="rect" id="Node000003" href="$processor_8h.html" title="Définition de la classe Processor et des ports d&#39;entrée/sortie." alt="" coords="377,304,466,331"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="113,110,76,137,34,174,19,195,10,215,10,235,20,254,42,271,76,284,119,294,168,302,271,311,364,316,359,317,271,316,168,307,118,300,75,289,39,275,16,258,4,236,5,214,14,192,30,171,72,133,116,105"/>
+<area shape="rect" id="Node000009" href="$utils_8h.html" title="Utilitaires mathématiques et helpers pour mopo (interpolation, buffers, conversions)." alt="" coords="295,155,351,181"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="166,104,283,149,278,152,166,109"/>
+<area shape="rect" id="Node000004" href="$common_8h.html" title="Core definitions and constants for the mopo synthesis library." alt="" coords="476,379,559,405"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="439,329,491,370,486,369,437,334"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="391,379,452,405"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="423,329,424,365,419,361,420,333"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="240,379,297,405"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="397,331,310,374,308,369,392,332"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="583,379,642,405"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="455,329,571,374,565,374,454,334"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="322,379,367,405"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="411,330,370,370,367,366,406,332"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="351,167,388,171,430,181,471,198,489,212,505,228,522,261,529,297,530,333,525,365,521,361,524,333,524,298,517,262,501,231,486,216,468,203,428,186,387,176,352,172"/>
+<area shape="poly" id="edge15_Node000009_Node000007" title=" " alt="" coords="351,168,391,173,437,183,486,200,530,227,559,259,581,295,597,331,608,365,603,362,592,333,577,297,555,262,527,231,484,205,436,188,390,178,352,173"/>
+<area shape="rect" id="Node000010" href="$value_8h.html" title="Processeurs Value : constantes ou control&#45;rate values." alt="" coords="427,229,491,256"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="347,179,424,221,419,222,346,185"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="29,229,150,256"/>
+<area shape="poly" id="edge12_Node000009_Node000011" title=" " alt="" coords="293,180,146,227,144,222,296,176"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="174,229,232,256"/>
+<area shape="poly" id="edge13_Node000009_Node000012" title=" " alt="" coords="300,183,238,223,235,219,304,180"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="256,229,305,256"/>
+<area shape="poly" id="edge14_Node000009_Node000013" title=" " alt="" coords="317,180,297,218,293,214,314,184"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="328,229,403,256"/>
+<area shape="poly" id="edge16_Node000009_Node000014" title=" " alt="" coords="331,179,353,216,348,216,330,184"/>
+<area shape="poly" id="edge11_Node000010_Node000003" title=" " alt="" coords="455,255,437,292,433,288,450,258"/>
+</map>

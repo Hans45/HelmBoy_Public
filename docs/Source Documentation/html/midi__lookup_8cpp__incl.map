@@ -1,0 +1,33 @@
+<map id="mopo/src/midi_lookup.cpp" name="mopo/src/midi_lookup.cpp">
+<area shape="rect" id="Node000001" title="Lookup helpers for converting MIDI note/cents to frequencies." alt="" coords="312,5,485,32"/>
+<area shape="rect" id="Node000002" href="$midi__lookup_8h.html" title="Lookup table pour convertir cents MIDI en fréquence." alt="" coords="348,80,449,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="400,30,401,65,396,63,397,35"/>
+<area shape="rect" id="Node000003" href="$common_8h.html" title="Core definitions and constants for the mopo synthesis library." alt="" coords="5,379,88,405"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,109,264,156,204,191,148,231,118,263,93,299,59,366,54,363,88,296,114,259,145,227,201,186,262,152,367,106"/>
+<area shape="rect" id="Node000004" href="$utils_8h.html" title="Utilitaires mathématiques et helpers pour mopo (interpolation, buffers, conversions)." alt="" coords="370,155,427,181"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="400,105,401,140,396,138,397,110"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="654,229,711,256"/>
+<area shape="poly" id="edge17_Node000002_Node000012" title=" " alt="" coords="423,105,647,221,642,223,422,110"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="368,173,282,190,231,207,183,232,157,255,125,291,66,368,62,365,121,288,153,251,180,227,229,202,281,185,372,170"/>
+<area shape="rect" id="Node000005" href="$value_8h.html" title="Processeurs Value : constantes ou control&#45;rate values." alt="" coords="194,229,257,256"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="368,183,271,225,269,220,372,180"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="348,379,407,405"/>
+<area shape="poly" id="edge15_Node000004_Node000009" title=" " alt="" coords="376,181,350,204,329,231,323,248,322,266,328,302,343,336,361,367,356,365,339,339,323,304,317,266,318,247,324,228,346,200,372,183"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="338,229,459,256"/>
+<area shape="poly" id="edge12_Node000004_Node000011" title=" " alt="" coords="400,180,401,215,396,212,397,184"/>
+<area shape="poly" id="edge13_Node000004_Node000012" title=" " alt="" coords="427,173,641,228,636,229,427,179"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="483,229,532,256"/>
+<area shape="poly" id="edge14_Node000004_Node000013" title=" " alt="" coords="418,179,479,221,474,221,417,185"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="556,229,630,256"/>
+<area shape="poly" id="edge16_Node000004_Node000014" title=" " alt="" coords="427,177,548,223,542,224,427,183"/>
+<area shape="rect" id="Node000006" href="$processor_8h.html" title="Définition de la classe Processor et des ports d&#39;entrée/sortie." alt="" coords="174,304,263,331"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="226,254,223,290,219,287,222,259"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="190,334,92,375,89,370,187,329"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="112,379,173,405"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="208,330,168,370,165,366,203,332"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="196,379,254,405"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="221,329,225,364,220,362,218,333"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="247,329,338,371,333,372,246,334"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="278,379,324,405"/>
+<area shape="poly" id="edge11_Node000006_Node000010" title=" " alt="" coords="234,329,278,369,273,368,232,334"/>
+</map>

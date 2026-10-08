@@ -1,0 +1,9 @@
+<map id="SynthBase" name="SynthBase">
+<area shape="rect" id="Node000001" title="Base synthesizer class providing core functionality." alt="" coords="104,165,298,1323"/>
+<area shape="rect" id="Node000003" href="$classHelmBoyEditor.html" title=" " alt="" coords="5,1371,192,1973"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,1335,135,1371,129,1371,135,1340"/>
+<area shape="rect" id="Node000004" href="$classHelmPlugin.html" title="Main plugin class for HelmBoy synthesizer." alt="" coords="217,1467,394,1877"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="269,1335,285,1467,280,1467,267,1340"/>
+<area shape="rect" id="Node000002" href="$classMidiManager_1_1Listener.html" title="Listener interface for MIDI&#45;triggered parameter changes." alt="" coords="108,5,295,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="202,130,204,166,199,165,201,135"/>
+</map>

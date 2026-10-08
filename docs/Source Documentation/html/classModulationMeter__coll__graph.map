@@ -1,0 +1,34 @@
+<map id="ModulationMeter" name="ModulationMeter">
+<area shape="rect" id="Node000001" title=" " alt="" coords="164,2399,300,2873"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,37,83,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="44,119,47,541,47,1925,50,1999,58,2072,87,2219,125,2355,167,2474,162,2475,120,2357,81,2220,53,2073,44,1999,42,1925,42,541,44,124"/>
+<area shape="rect" id="Node000010" href="$classSynthSection.html" title="Base class for all synthesizer UI sections." alt="" coords="82,188,266,897"/>
+<area shape="poly" id="edge12_Node000010_Node000002" title=" " alt="" coords="57,118,84,208,79,209,58,124"/>
+<area shape="rect" id="Node000003" href="$structmopo_1_1Output.html" title=" " alt="" coords="409,1804,509,2044"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="435,2041,408,2166,371,2295,309,2463,304,2461,366,2294,402,2165,433,2046"/>
+<area shape="rect" id="Node000004" href="$classmopo_1_1Processor.html" title=" " alt="" coords="442,2388,593,2884"/>
+<area shape="poly" id="edge6_Node000004_Node000003" title=" " alt="" coords="450,2041,449,2197,451,2281,457,2364,458,2372,453,2371,452,2364,446,2281,443,2197,449,2047"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="544,2387,546,2364,545,2285,535,2206,520,2130,505,2063,505,2057,525,2129,541,2205,550,2285,551,2364,549,2389"/>
+<area shape="rect" id="Node000005" href="$classmopo_1_1ProcessorRouter.html" title=" " alt="" coords="436,2956,597,3537"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="514,2896,516,2908,516,2957,511,2956,511,2908,513,2901"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="514,2955,516,2903,518,2898,519,2957"/>
+<area shape="rect" id="Node000006" href="$classSynthSlider.html" title="Custom slider control for synthesis parameters." alt="" coords="167,1553,356,2295"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="235,2292,237,2319,235,2382,230,2382,232,2319,235,2297"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="352,1191,395,1260"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="368,1272,341,1482,330,1554,325,1553,336,1481,367,1277"/>
+<area shape="rect" id="Node000008" href="$structmopo_1_1ValueDetails.html" title=" " alt="" coords="420,1084,543,1367"/>
+<area shape="poly" id="edge9_Node000006_Node000008" title=" " alt="" coords="441,1369,409,1482,364,1625,359,1624,404,1481,442,1364"/>
+<area shape="rect" id="Node000009" href="$classFullInterface.html" title=" " alt="" coords="150,969,327,1481"/>
+<area shape="poly" id="edge10_Node000006_Node000009" title=" " alt="" coords="247,1478,252,1536,246,1536,247,1484"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="209,909,217,969,212,969,209,914"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="107,37,205,107"/>
+<area shape="poly" id="edge13_Node000010_Node000011" title=" " alt="" coords="158,119,163,188,158,188,158,124"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="229,37,332,107"/>
+<area shape="poly" id="edge14_Node000010_Node000012" title=" " alt="" coords="269,124,257,189,251,188,270,119"/>
+<area shape="rect" id="Node000013" href="$classSynthButton_1_1ButtonListener.html" title=" " alt="" coords="356,5,530,139"/>
+<area shape="poly" id="edge15_Node000010_Node000013" title=" " alt="" coords="342,141,302,171,279,190,268,207,263,205,276,186,299,166,345,136"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="290,508,401,577"/>
+<area shape="poly" id="edge16_Node000009_Node000014" title=" " alt="" coords="338,595,281,970,276,969,338,590"/>
+<area shape="rect" id="Node000015" href="$classOpenGLBackground.html" title=" " alt="" coords="426,265,602,820"/>
+<area shape="poly" id="edge17_Node000009_Node000015" title=" " alt="" coords="450,823,416,899,398,922,379,936,361,950,342,971,339,977,334,975,338,968,357,946,376,932,394,918,411,896,452,817"/>
+</map>

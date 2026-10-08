@@ -1,0 +1,11 @@
+<map id="SynthSection" name="SynthSection">
+<area shape="rect" id="Node000001" title="Base class for all synthesizer UI sections." alt="" coords="126,187,310,896"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,37,83,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="62,118,128,292,123,293,62,124"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="107,37,205,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,119,174,187,168,187,162,124"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="229,37,332,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="274,119,267,188,262,187,273,124"/>
+<area shape="rect" id="Node000005" href="$classSynthButton_1_1ButtonListener.html" title=" " alt="" coords="356,5,530,139"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="406,150,312,351,307,349,404,154"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="WaveSelector" name="WaveSelector">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,955,217,1579"/>
+<area shape="rect" id="Node000002" href="$classSynthSlider.html" title="Custom slider control for synthesis parameters." alt="" coords="17,123,206,907"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,919,114,955,109,955,111,924"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="90,5,133,75"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="111,87,114,123,109,123,111,92"/>
+</map>
