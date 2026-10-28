@@ -60,9 +60,7 @@ void Oscilloscope::paintBackground(Graphics& g) {
 
 void Oscilloscope::resized() {
   auto *display = Desktop::getInstance().getDisplays().getPrimaryDisplay();
-  jassert(display != nullptr);
-
-  float scale = display->scale;
+  float scale = display != nullptr ? static_cast<float>(display->scale) : 1.0f;
   background_ = Image(Image::RGB, scale * getWidth(), scale * getHeight(), true);
   Graphics g(background_);
   g.addTransform(AffineTransform::scale(scale, scale));

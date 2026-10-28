@@ -206,8 +206,12 @@ class HelmBoyApplication : public JUCEApplication {
 
           constrainer_.setMinimumSize(2 * mopo::DEFAULT_WINDOW_WIDTH / 3,
                                       2 * mopo::DEFAULT_WINDOW_HEIGHT / 3);
-          if (auto* peer = getPeer())
-            constrainer_.setBorder(peer->getFrameSize());
+          if (auto* peer = getPeer()) {
+            if (const auto frame_size = peer->getFrameSizeIfPresent())
+              constrainer_.setBorder(*frame_size);
+            else
+              constrainer_.setBorder(BorderSize<int>(8));
+          }
           else
             constrainer_.setBorder(BorderSize<int>(8));
 
@@ -219,8 +223,10 @@ class HelmBoyApplication : public JUCEApplication {
           setSize(mopo::DEFAULT_WINDOW_WIDTH, mopo::DEFAULT_WINDOW_HEIGHT);
           centreWithSize(mopo::DEFAULT_WINDOW_WIDTH, mopo::DEFAULT_WINDOW_HEIGHT);
 
-          if (auto* peer = getPeer())
-            constrainer_.setBorder(peer->getFrameSize());
+          if (auto* peer = getPeer()) {
+            if (const auto frame_size = peer->getFrameSizeIfPresent())
+              constrainer_.setBorder(*frame_size);
+          }
 
           createEditorWithRetry();
         }
@@ -291,8 +297,10 @@ class HelmBoyApplication : public JUCEApplication {
             setVisible(true);
             toFront(true);
 
-            if (auto* peer = getPeer())
-              constrainer_.setBorder(peer->getFrameSize());
+            if (auto* peer = getPeer()) {
+              if (const auto frame_size = peer->getFrameSizeIfPresent())
+                constrainer_.setBorder(*frame_size);
+            }
 
             triggerAsyncUpdate();
           }

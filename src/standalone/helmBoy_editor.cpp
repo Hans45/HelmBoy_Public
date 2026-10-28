@@ -226,7 +226,7 @@ bool HelmBoyEditor::startAudioSubsystem() {
       std::ranges::for_each(std::views::iota(0, all_midi_ins.size()), [&](int i) {
         bool should_enable = persisted_enabled_midi_inputs.contains(all_midi_ins[i].identifier);
         restored_any = restored_any || should_enable;
-        device_manager_->setMidiInputEnabled(all_midi_ins[i].identifier, should_enable);
+        device_manager_->setMidiInputDeviceEnabled(all_midi_ins[i].identifier, should_enable);
       });
 
       if (persisted_enabled_midi_inputs.isEmpty())
@@ -234,7 +234,7 @@ bool HelmBoyEditor::startAudioSubsystem() {
       else if (!restored_any)
         Logger::writeToLog("[MIDI] Persisted MIDI inputs not available. Waiting for manual selection.");
 
-      device_manager_->addMidiInputCallback({}, midi_manager_.get());
+      device_manager_->addMidiInputDeviceCallback({}, midi_manager_.get());
       midi_inputs_registered_ = true;
       appendStartupTraceEditor("HelmBoyEditor::startAudioSubsystem midi registration done");
     }
@@ -272,7 +272,7 @@ HelmBoyEditor::~HelmBoyEditor() {
   LoadSave::saveEnabledMidiInputs(active_midi_inputs);
 
   if (device_manager_ != nullptr && midi_inputs_registered_ && midi_manager_)
-    device_manager_->removeMidiInputCallback({}, midi_manager_.get());
+    device_manager_->removeMidiInputDeviceCallback({}, midi_manager_.get());
   midi_inputs_registered_ = false;
 
   if (device_manager_ != nullptr && audio_source_player_ != nullptr && audio_channels_initialized_) {

@@ -29,13 +29,6 @@
 #include "synth_section.h"
 #include "text_look_and_feel.h"
 
-// Includes nécessaires pour dynamic_cast
-#ifdef JUCE_AUDIO_PLUGIN_CLIENT
-  #include "../plugin/helmBoy_plugin.h"
-#else
-  #include "../standalone/helmBoy_editor.h"
-#endif
-
 #define LOGO_WIDTH 128
 #define INFO_WIDTH 470
 #define STANDALONE_INFO_HEIGHT 650
@@ -267,30 +260,13 @@ void AboutSection::setVisible(bool should_be_visible) {
 void AboutSection::buttonClicked(Button* clicked_button) {
   if (clicked_button == enable_midi_2_.get())
   {
-    // Récupérer l'instance via SynthGuiInterface
     SynthGuiInterface* gui_interface = findParentComponentOfClass<SynthGuiInterface>();
     if (gui_interface) {
-      SynthBase* synth = gui_interface->getSynth();
       bool enable = enable_midi_2_->getToggleState();
 
-      // Sauvegarder la préférence
       LoadSave::saveMidi2Config(enable);
 
-      helmboy::Midi2Manager* midi2 = nullptr;
-
-      #ifdef JUCE_AUDIO_PLUGIN_CLIENT
-      // Dans un plugin (VST3/LV2)
-      if (auto* plugin = dynamic_cast<HelmPlugin*>(synth)) {
-        midi2 = plugin->getMidi2Manager();
-      }
-      #else
-      // Dans le standalone
-      if (auto* editor = dynamic_cast<HelmBoyEditor*>(synth)) {
-        midi2 = editor->getMidi2Manager();
-      }
-      #endif
-
-      if (midi2) {
+      if (auto* midi2 = gui_interface->getMidi2Manager()) {
         midi2->setMidiVersion(
           enable ? helmboy::Midi2Manager::MidiVersion::MIDI_2_0
                  : helmboy::Midi2Manager::MidiVersion::MIDI_1_0

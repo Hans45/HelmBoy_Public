@@ -56,7 +56,7 @@ class HelmBoyEditor : public Component,
     AudioDeviceManager* getAudioDeviceManager() override { return device_manager_.get(); }
 
     // MIDI 2.0
-    helmboy::Midi2Manager* getMidi2Manager() { return midi2_manager_.get(); }
+    helmboy::Midi2Manager* getMidi2Manager() override { return midi2_manager_.get(); }
 
     bool startAudioSubsystem();
     bool initializeGuiComponents();

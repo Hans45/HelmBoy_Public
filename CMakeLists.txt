@@ -13,7 +13,7 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif()
 
 project(HELMBOY
-  VERSION 1.0.0
+  VERSION 1.1.1
   DESCRIPTION "A cross-platform polyphonic synthesizer, modernised by Marc Scheffer."
   LANGUAGES C CXX)
 
@@ -30,13 +30,23 @@ if(MSVC)
   # Enable vectorization reports in debug builds
   set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} /arch:AVX2")
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  # Clang optimizations
-  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -mavx2 -mfma -ffast-math")
-  set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} -mavx2 -mfma -ffast-math")
+  # Clang optimizations - Apply AVX2 only if compiling for x86_64
+  if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64" OR CMAKE_OSX_ARCHITECTURES MATCHES "x86_64")
+    set(AVX_FLAGS "-mavx2 -mfma")
+  else()
+    set(AVX_FLAGS "") # ARM64 (Apple Silicon / iOS) uses NEON automatically
+  endif()
+  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} ${AVX_FLAGS} -ffast-math")
+  set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} ${AVX_FLAGS} -ffast-math")
 elseif(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-  # GCC optimizations
-  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -mavx2 -mfma -ffast-math -ftree-vectorize")
-  set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} -mavx2 -mfma -ftree-vectorize")
+  # GCC optimizations - Apply AVX2 only if compiling for x86_64
+  if(CMAKE_SYSTEM_PROCESSOR MATCHES "x86_64")
+    set(AVX_FLAGS "-mavx2 -mfma")
+  else()
+    set(AVX_FLAGS "")
+  endif()
+  set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} ${AVX_FLAGS} -ffast-math -ftree-vectorize")
+  set(CMAKE_CXX_FLAGS_RELWITHDEBINFO "${CMAKE_CXX_FLAGS_RELWITHDEBINFO} ${AVX_FLAGS} -ffast-math -ftree-vectorize")
 endif()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -54,9 +64,10 @@ option(HELMBOY_DEBUG_REVERB "Log Reverb wet/dry sanitization and period clamping
 option(HELMBOY_ENABLE_BIQUAD_JUCE_PATH "Enable optional JUCE-compatible path in BiquadFilter" ON)
 option(HELMBOY_ENABLE_SVF_JUCE_PATH "Enable optional JUCE-compatible path in StateVariableFilter" ON)
 option(HELMBOY_ENABLE_REVERB_JUCE_PATH "Enable optional JUCE-compatible path in Reverb" ON)
+option(HELMBOY_RUN_TESTS "Enable and run HelmBoy tests" OFF)
 
 # VST3 SDK Handling
-set(JUCE_VST3_SDK "${CMAKE_CURRENT_SOURCE_DIR}/external/VST3_SDK")
+set(JUCE_VST3_SDK "${CMAKE_CURRENT_SOURCE_DIR}/externals/VST3_SDK")
 
 # ==================================================
 
@@ -91,8 +102,24 @@ juce_add_binary_data(HelmBoyData SOURCES
 
 # ==================================================
 
+# ==============================================================================
+# CONFIGURATION DES DÉPENDANCES SYSTÈME LINUX
+# ==============================================================================
+if(UNIX AND NOT APPLE)
+    find_package(PkgConfig REQUIRED)
+    pkg_check_modules(LINUX_DEPS REQUIRED alsa freetype2 libcurl x11 xext xinerama xrandr xcursor)
+    pkg_check_modules(JACK_DEP jack)
+endif()
+
+# Désactivation temporaire de l'option LTO pour les builds Debug et RelWithDebInfo, car elle peut causer des problèmes de compilation avec certaines versions de GCC/Clang.
+# if (CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
+    # set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -flto=auto")
+    # set(CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS_RELEASE} -flto=auto")
+# endif()
+
 option(BUILD_VST3 "Build VST3 plugin" ON)
 option(BUILD_AU "Build AU plugin" ON)
+option(BUILD_AUv3 "Build AUv3 plugin" ON)
 option(BUILD_LV2 "Build LV2 plugin" ON)
 option(BUILD_AAX "Build AAX plugin" OFF)
 
@@ -105,6 +132,9 @@ if(BUILD_VST3)
 endif()
 if(BUILD_AU)
   list(APPEND PLUGIN_FORMATS AU)
+endif()
+if(BUILD_AUv3)
+  list(APPEND PLUGIN_FORMATS AUv3)
 endif()
 if(BUILD_LV2)
   list(APPEND PLUGIN_FORMATS LV2)
@@ -129,11 +159,22 @@ juce_add_plugin(HelmBoyPlugin
   LV2URI "https://github.com/Hans45/helmBoy"
   LV2_WANTS_LATENCY FALSE)
 
+# The standalone GUI target defines this as 1 itself. Don't propagate the
+# plugin shared-code target's conflicting value to its consumers.
+get_target_property(HELMBOY_PLUGIN_INTERFACE_DEFINITIONS
+  HelmBoyPlugin INTERFACE_COMPILE_DEFINITIONS)
+if(HELMBOY_PLUGIN_INTERFACE_DEFINITIONS)
+  list(FILTER HELMBOY_PLUGIN_INTERFACE_DEFINITIONS
+    EXCLUDE REGEX "^JUCE_STANDALONE_APPLICATION=")
+  set_property(TARGET HelmBoyPlugin PROPERTY INTERFACE_COMPILE_DEFINITIONS
+    "${HELMBOY_PLUGIN_INTERFACE_DEFINITIONS}")
+endif()
+
 juce_generate_juce_header(HelmBoyPlugin)
 
 target_sources(HelmBoyPlugin PRIVATE
   src/synthesis/helmBoy_engine.h
-  src/plugin/helmboy_plugin.h
+  src/plugin/helmBoy_plugin.h
   src/common/border_bounds_constrainer.cpp
   src/common/file_list_box_model.cpp
   src/common/helmBoy_common.cpp
@@ -242,7 +283,7 @@ target_include_directories(HelmBoyPlugin PUBLIC
   src/synthesis)
 
 target_include_directories(HelmBoyPlugin PRIVATE
- externals/xsimd/include)
+  externals/xsimd/include)
 
   # Spécifie le chemin du VST3 SDK
 set(VST3_SDK_PATH "${CMAKE_CURRENT_SOURCE_DIR}/externals/VST3_SDK")
@@ -250,10 +291,25 @@ set(JUCE_DEFINES
   JUCE_VST3_CAN_REPLACE_VST2=0
   JUCE_WEB_BROWSER=0
   JUCE_USE_CURL=0
-  JUCE_USE_XRANDR=0
   JUCE_OPENGL=1
   JUCE_USE_OPENGL_SHADERS=1
   JUCE_VST3_SDK_PATH="${VST3_SDK_PATH}")
+
+
+# Ajustements spécifiques à Linux pour le Plugin (Audio et Affichage)
+if(LINUX OR CMAKE_SYSTEM_NAME MATCHES "Linux")
+  list(APPEND JUCE_DEFINES
+    JUCE_USE_XRANDR=1
+    JUCE_ALSA=1
+    JUCE_JACK=1
+  )
+else()
+  list(APPEND JUCE_DEFINES
+    JUCE_USE_XRANDR=0
+    JUCE_ALSA=0
+    JUCE_JACK=0
+  )
+endif()
 
 target_compile_definitions(HelmBoyPlugin PUBLIC
   # HelmBoy tries to detect at runtime whether it's actually installed,
@@ -261,14 +317,12 @@ target_compile_definitions(HelmBoyPlugin PUBLIC
   # the LV2 .ttl generator. If it's the latter, Helm needs to know
   # where its factory presets are on the developer's disk. Not ideal
   # for a number of reasons, but it'll have to do for now.
-  helmBoy_LV2GEN_FACTORY_PRESET_PATH="${CMAKE_CURRENT_SOURCE_DIR}/patches/Factory Presets"
+  "helmBoy_LV2GEN_FACTORY_PRESET_PATH=\"${CMAKE_CURRENT_SOURCE_DIR}/patches/Factory Presets\""
   ${JUCE_DEFINES}
   $<$<BOOL:${HELMBOY_DEBUG_AUDIO_LEVELS}>:HELMBOY_DEBUG_AUDIO_LEVELS=1>
   $<$<BOOL:${HELMBOY_DEBUG_BUFFER_INTEGRITY}>:HELMBOY_DEBUG_BUFFER_INTEGRITY=1>
   $<$<BOOL:${HELMBOY_DEBUG_DSP_PREP}>:HELMBOY_DEBUG_DSP_PREP=1>
 )
-
-
 
 target_link_libraries(HelmBoyPlugin
   PUBLIC
@@ -291,9 +345,23 @@ target_link_libraries(HelmBoyPlugin
     juce::juce_opengl
 
     juce::juce_recommended_config_flags
-    juce::juce_recommended_lto_flags
+    # Désactivation temporaire de l'option LTO pour les builds Debug et RelWithDebInfo, car elle peut causer des problèmes de compilation avec certaines versions de GCC/Clang.
+    # juce::juce_recommended_lto_flags
     # juce::juce_recommended_warning_flags
     )
+
+if(BUILD_LV2 AND (UNIX AND NOT APPLE) AND CMAKE_CXX_COMPILER_ID MATCHES "GNU")
+    message(STATUS "Forcing RTTI generation for HelmBoyEditor (LV2 + Linux + GCC + LTO)")
+    target_sources(HelmBoyPlugin PRIVATE src/plugin/force_editor_rtti.cpp)
+endif()
+
+if(UNIX AND NOT APPLE)
+    target_link_libraries(HelmBoyPlugin PUBLIC
+        ${LINUX_DEPS_LIBRARIES}
+        $<$<BOOL:${JACK_DEP_FOUND}>:${JACK_DEP_LIBRARIES}>
+        GL # Bibliothèque OpenGL standard
+    )
+endif()
 
 # ==================================================
 
@@ -341,28 +409,40 @@ else()
     target_compile_definitions(HelmBoyStandalone PRIVATE JUCE_ASIO=0)
 endif()
 
-target_compile_definitions(HelmBoyStandalone PRIVATE
+# Définitions de base communes pour le Standalone
+set(STANDALONE_DEFS
   JUCE_VST3_CAN_REPLACE_VST2=0
   JUCE_WEB_BROWSER=0
   JUCE_USE_CURL=0
-  JUCE_USE_XRANDR=0
   JUCE_OPENGL=1
   JUCE_USE_OPENGL_SHADERS=1
-  JUCE_WASAPI=1
-  JUCE_DIRECTSOUND=1
-  JUCE_ALSA=0
-  JUCE_JACK=0
-  JUCE_JACK_CLIENT_NAME="HelmBoy"
-  JUCE_ALSA_MIDI_NAME="HelmBoy"
   $<$<BOOL:${HELMBOY_DEBUG_AUDIO_LEVELS}>:HELMBOY_DEBUG_AUDIO_LEVELS=1>
   $<$<BOOL:${HELMBOY_DEBUG_BUFFER_INTEGRITY}>:HELMBOY_DEBUG_BUFFER_INTEGRITY=1>
-  $<$<BOOL:${HELMBOY_DEBUG_DSP_PREP}>:HELMBOY_DEBUG_DSP_PREP=1>)
+  $<$<BOOL:${HELMBOY_DEBUG_DSP_PREP}>:HELMBOY_DEBUG_DSP_PREP=1>
+)
 
+# Configuration des serveurs audio selon l'OS cible
+if(MSVC OR WIN32)
+  list(APPEND STANDALONE_DEFS JUCE_WASAPI=1 JUCE_DIRECTSOUND=1 JUCE_ALSA=0 JUCE_JACK=0 JUCE_USE_XRANDR=0)
+elseif(UNIX AND NOT APPLE)
+  list(APPEND STANDALONE_DEFS JUCE_WASAPI=0 JUCE_DIRECTSOUND=0 JUCE_ALSA=1 JUCE_JACK=1 JUCE_USE_XRANDR=1 JUCE_JACK_CLIENT_NAME="HelmBoy")
+else() # macOS
+  list(APPEND STANDALONE_DEFS JUCE_WASAPI=0 JUCE_DIRECTSOUND=0 JUCE_ALSA=0 JUCE_JACK=0 JUCE_USE_XRANDR=0)
+endif()
+
+target_compile_definitions(HelmBoyStandalone PRIVATE ${STANDALONE_DEFS})
 target_link_libraries(HelmBoyStandalone PRIVATE HelmBoyPlugin)
+if(UNIX AND NOT APPLE)
+    target_link_libraries(HelmBoyStandalone PRIVATE
+        ${LINUX_DEPS_LIBRARIES}
+        $<$<BOOL:${JACK_DEP_FOUND}>:${JACK_DEP_LIBRARIES}>
+        GL
+    )
+endif()
 target_link_libraries(HelmBoyStandalone PRIVATE HelmBoyData)
 
 option(HELMBOY_BUILD_MIDI_TESTS "Build focused MIDI 2.0 decoder tests" OFF)
-if(HELMBOY_BUILD_MIDI_TESTS)
+if(HELMBOY_BUILD_MIDI_TESTS AND HELMBOY_RUN_TESTS)
   enable_testing()
   juce_add_console_app(HelmBoyMidiTests
     PRODUCT_NAME "HelmBoy MIDI Tests")
@@ -379,12 +459,13 @@ if(HELMBOY_BUILD_MIDI_TESTS)
   target_link_libraries(HelmBoyMidiTests PRIVATE
     juce::juce_audio_basics
     juce::juce_audio_devices
-    juce::juce_recommended_config_flags)
+    juce::juce_recommended_config_flags
+  )
   add_test(NAME Midi2ManagerTests COMMAND HelmBoyMidiTests)
 endif()
 
 option(HELMBOY_BUILD_EFFECT_TESTS "Build focused chorus and stereo effects tests" OFF)
-if(HELMBOY_BUILD_EFFECT_TESTS)
+if(HELMBOY_BUILD_EFFECT_TESTS AND HELMBOY_RUN_TESTS)
   enable_testing()
   juce_add_console_app(HelmBoyEffectTests
     PRODUCT_NAME "HelmBoy Effect Tests")
@@ -401,4 +482,64 @@ if(HELMBOY_BUILD_EFFECT_TESTS)
     juce::juce_dsp
     juce::juce_recommended_config_flags)
   add_test(NAME StereoEffectsTests COMMAND HelmBoyEffectTests)
+endif()
+
+# ==============================================================================
+# CONFIGURATION DE LA SIGNATURE DE CODE APPLE (macOS & iOS)
+# Pour un test et une compiation locale, vous pouvez utiliser un compte développeur gratuit, mais pour la distribution sur l'App Store, un compte payant est nécessaire.
+# Syntaxe à utiliser pour compiler en vue d'une utilisation locale :
+# cmake -B build -G Xcode -DAPPLE_CODE_SIGN_IDENTITY="Apple Development" -DAPPLE_DEVELOPMENT_TEAM="Sign to Run Locally"
+# Une fois le projet compilé dans Xcode, il est nécessaire d'exécuter la version Standalone au moins une fois
+# pour enregistrer l'AUv3 dans le système (PluginKit) afin que vos DAW (Logic, GarageBand) puissent le détecter.
+# ==============================================================================
+if(APPLE)
+  # 1. Définissez vos identifiants Apple Developer (Remplacez par vos informations)
+  set(APPLE_DEVELOPMENT_TEAM "VOTRE_TEAM_ID_ICI" CACHE STRING "Apple Development Team ID")
+  set(APPLE_CODE_SIGN_IDENTITY "Apple Development" CACHE STRING "Code sign identity")
+
+  # 2. Liste des cibles créées par JUCE pour HelmBoyPlugin à signer obligatoirement
+  # JUCE génère automatiquement des sous-cibles basées sur le nom principal
+  set(HELMBOY_XCODE_TARGETS
+    HelmBoyPlugin           # Cible globale
+    HelmBoyStandalone # L'application parente (nécessaire pour l'AUv3)
+    HelmBoyPlugin_AU        # Le format AUv2 traditionnel
+    HelmBoyPlugin_AUv3      # L'extension AUv3 (.appex)
+  )
+
+  # 3. Application des attributs de signature à toutes les cibles Xcode
+  foreach(target IN LISTS HELMBOY_XCODE_TARGETS)
+    if(TARGET ${target})
+      set_target_properties(${target} PROPERTIES
+        XCODE_ATTRIBUTE_DEVELOPMENT_TEAM "${APPLE_DEVELOPMENT_TEAM}"
+        XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "${APPLE_CODE_SIGN_IDENTITY}"
+        XCODE_ATTRIBUTE_CODE_SIGN_STYLE "Automatic"
+      )
+    endif()
+  endforeach()
+
+  # 4. Activation du Sandbox et du Hardened Runtime (Essentiel pour la validation AUv3)
+  if(TARGET HelmBoyPlugin_AUv3)
+    set_target_properties(HelmBoyPlugin_AUv3 PROPERTIES
+      XCODE_ATTRIBUTE_ENABLE_HARDENED_RUNTIME "YES"
+      # Obligatoire pour l'App Store. A passer à NO pour le développement local et l'accès aux fichiers.
+      XCODE_ATTRIBUTE_com.apple.security.app-sandbox "YES"
+    )
+  endif()
+endif()
+
+if(MSVC)
+  get_property(all_targets DIRECTORY PROPERTY BUILDSYSTEM_TARGETS)
+
+  foreach(target IN LISTS all_targets)
+    get_target_property(target_type ${target} TYPE)
+
+    if(target_type STREQUAL "EXECUTABLE"
+       OR target_type STREQUAL "SHARED_LIBRARY"
+       OR target_type STREQUAL "MODULE_LIBRARY")
+      target_link_options(${target} PRIVATE
+        $<$<CONFIG:Release>:/LTCG>
+        $<$<CONFIG:RelWithDebInfo>:/LTCG>
+        $<$<CONFIG:MinSizeRel>:/LTCG>)
+    endif()
+  endforeach()
 endif()

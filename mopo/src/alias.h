@@ -52,7 +52,7 @@ namespace mopo {
        * @brief Calcule la sortie pour l'échantillon `i`.
        * @param i Indice de l'échantillon à traiter.
        */
-      [[nodiscard]] void tick(int i) {
+      void tick(int i) {
         mopo_float audio = input(static_cast<int>(Inputs::Audio))->at(i);
         mopo_float wet = input(static_cast<int>(Inputs::Wet))->at(i);
         mopo_float period = sample_rate_ / input(static_cast<int>(Inputs::Frequency))->at(i);

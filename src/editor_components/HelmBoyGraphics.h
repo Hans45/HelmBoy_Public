@@ -81,6 +81,11 @@ private:
     juce::Path cnxPath;
     juce::Path modulationCirclePath;
     juce::Path modulationSymbolPath;
+    juce::Path ABComparisonPath;
+    juce::Path returnToInitPath;
+    juce::Path previousPath;
+    juce::Path nextPath;
+    juce::Path HelmBoyFacePath;
 
     /** @brief Convertit une couleur en nuance de gris. */
     juce::Colour toGrayScale(const juce::Colour& colour);

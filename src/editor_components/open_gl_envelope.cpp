@@ -83,9 +83,7 @@ void OpenGLEnvelope::paintBackground() {
   float ratio = getHeight() / 100.0f;
 
   auto *display = Desktop::getInstance().getDisplays().getPrimaryDisplay();
-  jassert(display != nullptr);
-
-  float scale = display->scale;
+  float scale = display != nullptr ? static_cast<float>(display->scale) : 1.0f;
   background_image_ = Image(Image::ARGB, scale * getWidth(), scale * getHeight(), true);
   {
     Graphics g(background_image_);

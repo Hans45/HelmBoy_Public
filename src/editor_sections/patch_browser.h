@@ -74,6 +74,7 @@ class PatchBrowser : public Overlay,
     void visibilityChanged() override;
 
     void selectedFilesChanged(FileListBoxModel* model) override;
+    void fileDoubleClicked(FileListBoxModel* model, int row_number) override;
     void textEditorTextChanged(TextEditor& editor) override;
     void textEditorEscapeKeyPressed(TextEditor& editor) override;
 
@@ -96,6 +97,7 @@ class PatchBrowser : public Overlay,
 
   private:
     void ensureInitialScan();
+    void loadSelectedPatch();
     bool loadFromFile(File& patch);
     void setPatchInfo(File& patch);
     void scanBanks();

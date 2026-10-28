@@ -345,6 +345,15 @@ void PatchBrowser::selectedFilesChanged(FileListBoxModel* model) {
   }
 }
 
+void PatchBrowser::fileDoubleClicked(FileListBoxModel* model, int row_number) {
+  if (model != patches_model_.get() || row_number < 0 ||
+      row_number >= patches_model_->getNumRows())
+    return;
+
+  patches_view_->selectRow(row_number);
+  loadSelectedPatch();
+}
+
 void PatchBrowser::textEditorTextChanged(TextEditor& editor) {
   scanPatches();
 }
@@ -429,21 +438,7 @@ void PatchBrowser::buttonClicked(Button* clicked_button) {
                          });
   }
   else if (clicked_button == done_button_.get())
-  {
-    File patch_to_load;
-    SparseSet<int> selected_rows = patches_view_->getSelectedRows();
-    if (selected_rows.size())
-      patch_to_load = patches_model_->getFileAtRow(selected_rows[0]);
-
-    setVisible(false);
-    if (selector_)
-      selector_->ensureBrowseButtonIsBrowse();
-
-    if (patch_to_load.exists()) {
-      if (loadFromFile(patch_to_load))
-        external_patch_ = patch_to_load;
-    }
-  }
+    loadSelectedPatch();
   else if (clicked_button == hide_button_.get())
   {
     setVisible(false);
@@ -480,6 +475,22 @@ void PatchBrowser::buttonClicked(Button* clicked_button) {
                            browser->patches_view_->deselectAllRows();
                            browser->scanAll();
                          });
+  }
+}
+
+void PatchBrowser::loadSelectedPatch() {
+  File patch_to_load;
+  SparseSet<int> selected_rows = patches_view_->getSelectedRows();
+  if (selected_rows.size())
+    patch_to_load = patches_model_->getFileAtRow(selected_rows[0]);
+
+  setVisible(false);
+  if (selector_)
+    selector_->ensureBrowseButtonIsBrowse();
+
+  if (patch_to_load.exists()) {
+    if (loadFromFile(patch_to_load))
+      external_patch_ = patch_to_load;
   }
 }
 

@@ -238,8 +238,6 @@ class HelmPlugin : public SynthBase, public AudioProcessor, public ValueBridge::
 
     int current_program_;
     Array<File> all_patches_;
-    AudioPlayHead::CurrentPositionInfo position_info_;
-
     std::map<std::string, ValueBridge*> bridge_lookup_;
 
     std::unique_ptr<helmboy::Midi2Manager> midi2_manager_;

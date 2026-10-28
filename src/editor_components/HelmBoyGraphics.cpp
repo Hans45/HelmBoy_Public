@@ -62,8 +62,6 @@ HelmBoyGraphics::HelmBoyGraphics(){
                                              166, 187, 59, 67, 45, 34, 162, 67, 2, 75, 90, 67, 45, 34, 162, 67, 0, 0, 128, 67, 98, 45, 34, 162, 67, 94, 218, 146, 67, 94, 218, 146, 67, 45, 34, 162, 67, 0, 0, 128, 67, 45, 34, 162, 67, 99, 101, 0, 0};
 
 
-    logoPath.loadPathFromData(logoPathData, sizeof(logoPathData));
-    cnxPath.loadPathFromData(cnxPathData, sizeof(cnxPathData));
 
     static const juce::String modulationCircleSvgPath(
         "M 12,0 C 5.367,0 0,5.367 0,12 0,18.633 5.367,24 12,24 "
@@ -84,8 +82,21 @@ HelmBoyGraphics::HelmBoyGraphics(){
         "1.884,0 2.434,2.633 3.017,4.65 0.083,0.3 0.283,0.933 0.333,1.016 "
         "0.267,0.567 0.484,0.934 0.717,1.05 0.267,0.15 0.7,0.434 "
         "0.567,0.934 -0.084,0.383 -0.434,0.583 -0.834,0.566");
+    static const juce::String ABComparisonSvgPath("M10.55 21H4.5c-0.4 0 -0.75 -0.15 -1.05 -0.45 -0.3 -0.3 -0.45 -0.65 -0.45 -1.05V4.5c0 -0.4 0.15 -0.75 0.45 -1.05C3.75 3.15 4.1 3 4.5 3h6.05V1.75c0 -0.2125 0.07235 -0.390665 0.217 -0.5345 0.1445 -0.143665 0.32365 -0.2155 0.5375 -0.2155 0.21365 0 0.39135 0.071835 0.533 0.2155 0.14165 0.143835 0.2125 0.322 0.2125 0.5345v20.5c0 0.2125 -0.07235 0.3906 -0.217 0.53425 -0.1445 0.14385 -0.32365 0.21575 -0.5375 0.21575 -0.21365 0 -0.39135 -0.0719 -0.533 -0.21575 -0.14165 -0.14365 -0.2125 -0.32175 -0.2125 -0.53425V21ZM4.5 18.45h6.05V11.525L4.5 18.45ZM13.55 21V11.625L19.5 18.45V4.5H13.55V3H19.5c0.4 0 0.75 0.15 1.05 0.45 0.3 0.3 0.45 0.65 0.45 1.05v15c0 0.4 -0.15 0.75 -0.45 1.05 -0.3 0.3 -0.65 0.45 -1.05 0.45H13.55Z");
+    static const juce::String returnToInitSvgPath("m14.5,5c3.87,0 7,3.13 7,7 0,3.87-3.13,7-7,7-3.87,0-7-3.13-7-7H10L6.5,8.5 3,12h2.5c0,4.97 4.03,9 9,9 4.97,0 9-4.03 9-9 0-4.97-4.03-9-9-9z");
+    static const juce::String previousSvgPath("M15.41 16.59L10.83 12L15.41 7.41L14 6L8 12L14 18Z");
+    static const juce::String nextSvgPath("M8.59 16.59L13.17 12L8.59 7.41L10 6L16 12L10 18Z");
+    static const juce::String HelmBoyFaceSvgPath("M4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12V18H16V12H18C18 8.69 15.31 6 12 6C8.69 6 6 8.69 6 12H8V18H4ZM9 8H11V11H13V8H15V16H13V13H11V16H9Z");
+
+    logoPath = juce::Drawable::parseSVGPath(HelmBoyFaceSvgPath);
+    cnxPath.loadPathFromData(cnxPathData, sizeof(cnxPathData));
     modulationCirclePath = juce::Drawable::parseSVGPath(modulationCircleSvgPath);
     modulationSymbolPath = juce::Drawable::parseSVGPath(modulationSymbolSvgPath);
+    ABComparisonPath = juce::Drawable::parseSVGPath(ABComparisonSvgPath);
+    returnToInitPath = juce::Drawable::parseSVGPath(returnToInitSvgPath);
+    previousPath = juce::Drawable::parseSVGPath(previousSvgPath);
+    nextPath = juce::Drawable::parseSVGPath(nextSvgPath);
+    HelmBoyFacePath = juce::Drawable::parseSVGPath(HelmBoyFaceSvgPath);
 }
 
 void HelmBoyGraphics::paint(juce::Graphics& g)

@@ -59,6 +59,11 @@ void FileListBoxModel::selectedRowsChanged(int last_selected_row) {
     listener_->selectedFilesChanged(this);
 }
 
+void FileListBoxModel::listBoxItemDoubleClicked(int row_number, const MouseEvent&) {
+  if (listener_)
+    listener_->fileDoubleClicked(this, row_number);
+}
+
 void FileListBoxModel::deleteKeyPressed(int lastRowSelected) {
   if (delete_section_ == nullptr)
     return;

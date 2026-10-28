@@ -68,7 +68,7 @@ HelmPlugin::HelmPlugin() :
   appendPluginHostTrace("HelmPlugin::HelmPlugin midi2 manager start");
   midi2_manager_ = std::make_unique<helmboy::Midi2Manager>();
 
-  // Charger la configuration MIDI 2.0 sauvegardée
+  // Charger la configuration MIDI 2.0 sauvegardï¿½e
   bool enable_midi2 = LoadSave::shouldEnableMidi2();
   midi2_manager_->setMidiVersion(
     enable_midi2 ? helmboy::Midi2Manager::MidiVersion::MIDI_2_0
@@ -262,14 +262,17 @@ void HelmPlugin::releaseResources() {
 void HelmPlugin::processBlock(AudioSampleBuffer& buffer, MidiBuffer& midi_messages) {
   int total_samples = buffer.getNumSamples();
   int num_channels = getTotalNumOutputChannels();
-  position_info_.resetToDefault();
-  auto* play_head = getPlayHead();
-  const bool has_position = play_head != nullptr && play_head->getCurrentPosition(position_info_);
-  if (has_position && std::isfinite(position_info_.bpm) && position_info_.bpm > 0.0)
-    engine_.setBpm(position_info_.bpm);
+  if (auto* play_head = getPlayHead()) {
+    if (const auto position = play_head->getPosition()) {
+      if (const auto bpm = position->getBpm(); bpm && std::isfinite(*bpm) && *bpm > 0.0)
+        engine_.setBpm(*bpm);
 
-  if (has_position && (position_info_.isPlaying || position_info_.isLooping || position_info_.isRecording))
-    engine_.correctToTime(position_info_.timeInSamples);
+      if (position->getIsPlaying() || position->getIsLooping() || position->getIsRecording()) {
+        if (const auto time_in_samples = position->getTimeInSamples())
+          engine_.correctToTime(*time_in_samples);
+      }
+    }
+  }
 
   processControlChanges();
   processModulationChanges();

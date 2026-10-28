@@ -41,6 +41,7 @@ class FileListBoxModel : public ListBoxModel {
         virtual ~Listener() { }
 
         virtual void selectedFilesChanged(FileListBoxModel* model) = 0;
+        virtual void fileDoubleClicked(FileListBoxModel*, int) { }
     };
 
     FileListBoxModel() : listener_(nullptr), sort_ascending_(true), delete_section_(nullptr) { }
@@ -61,6 +62,9 @@ class FileListBoxModel : public ListBoxModel {
 
     /** @brief Called when the selected rows change. @param last_selected_row Last selected row index. */
     void selectedRowsChanged(int last_selected_row) override;
+
+    /** @brief Notify the listener when a row is double-clicked. */
+    void listBoxItemDoubleClicked(int row_number, const MouseEvent&) override;
 
     /** @brief Handle delete key pressed event for selected row(s). */
     void deleteKeyPressed(int lastRowSelected) override;

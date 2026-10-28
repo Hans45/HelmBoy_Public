@@ -153,7 +153,8 @@ void FullInterface::ensureOpenGlInitialized() {
   if (!open_gl_initialized_ && getPeer() != nullptr) {
     open_gl_context.setContinuousRepainting(true);
     open_gl_context.setRenderer(this);
-    open_gl_context.setOpenGLVersionRequired(OpenGLContext::openGL3_2);
+    open_gl_context.setPreferredVersion(OpenGLContext::Version{3, 2});
+    open_gl_context.setPreferredProfile(OpenGLContext::Profile::core);
     open_gl_initialized_ = true;
   }
 

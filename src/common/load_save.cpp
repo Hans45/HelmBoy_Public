@@ -1015,7 +1015,8 @@ bool LoadSave::loadMidiProfileFromFile(const File& file, MidiManager* midi_manag
       }
       for (const auto& info : juce::MidiInput::getAvailableDevices()) {
         if (wanted.contains(info.identifier))
-          device_manager->setMidiInputEnabled(info.identifier, true);
+          // Avant : device_manager->setMidiInputEnabled(info.identifier, true);
+          device_manager->setMidiInputDeviceEnabled(info.identifier, true); // Aprï¿½s
       }
     }
   }
@@ -1100,7 +1101,7 @@ bool LoadSave::shouldEnableMidi2() {
   var config_state = getConfigVar();
   DynamicObject* config_object = config_state.getDynamicObject();
   if (!config_state.isObject())
-    return false;  // MIDI 2.0 désactivé par défaut
+    return false;  // MIDI 2.0 dï¿½sactivï¿½ par dï¿½faut
 
   if (!config_object->hasProperty("enable_midi2"))
     return false;
@@ -1351,10 +1352,8 @@ void LoadSave::importBank() {
                          }
                          if (file.existsAsFile()) {
                            try {
-                             // ZipFile needs an InputStream and takes ownership
-                             FileInputStream* input_stream = new FileInputStream(file);
+                             auto input_stream = std::make_unique<FileInputStream>(file);
                              if (!input_stream->openedOk()) {
-                               delete input_stream;
                                MessageManager::callAsync([]() {
                                  AlertWindow::showMessageBoxAsync(AlertWindow::WarningIcon,
                                                                    TRANS("Import Failed"),
@@ -1363,7 +1362,7 @@ void LoadSave::importBank() {
                                return;
                              }
 
-                             ZipFile zip_file(input_stream, true); // true = ZipFile takes ownership
+                             ZipFile zip_file(std::move(input_stream));
 
                              // Check if any files will be overwritten
                              File bank_dir = LoadSave::getBankDirectory();
@@ -1388,9 +1387,9 @@ void LoadSave::importBank() {
                                String message = TRANS("Some files already exist and will be overwritten:");
                                message += "\n\n";
                                for (const String& filename : conflicting_files)
-                                 message += "• " + filename + "\n";
+                                 message += "ï¿½ " + filename + "\n";
                                if (zip_file.getNumEntries() > conflicting_files.size())
-                                 message += TRANS("• ... and more\n");
+                                 message += TRANS("ï¿½ ... and more\n");
                                message += "\n" + TRANS("Do you want to continue?");
 
                                // Use a shared flag to communicate between message thread and this thread

@@ -66,6 +66,10 @@ HelmEditor::HelmEditor(HelmPlugin& helm) : AudioProcessorEditor(&helm), SynthGui
   appendPluginHostTraceEditor("HelmEditor::HelmEditor end");
 }
 
+HelmEditor::~HelmEditor() {
+  setLookAndFeel(nullptr);
+}
+
 void HelmEditor::paint(Graphics& g) {
   g.fillAll(Colours::white);
 }

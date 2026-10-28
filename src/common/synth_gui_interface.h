@@ -29,6 +29,10 @@
 #include "full_interface.h"
 #include "synth_base.h"
 
+namespace helmboy {
+class Midi2Manager;
+}
+
 /**
  * @class SynthGuiInterface
  * @brief Glue code exposing the synthesizer to the GUI layer.
@@ -43,6 +47,8 @@ class SynthGuiInterface {
 
     /** @brief Return the audio device manager used by the GUI (if any). */
     virtual AudioDeviceManager* getAudioDeviceManager() { return nullptr; }
+    /** @brief Return the MIDI 2.0 manager used by the synthesizer, if any. */
+    virtual helmboy::Midi2Manager* getMidi2Manager() { return nullptr; }
 
     /** @brief Access the synthesizer instance attached to this GUI. */
     SynthBase* getSynth() { return synth_; }

@@ -105,9 +105,7 @@ void WaveViewer::paintBackground(Graphics& g) {
 
 void WaveViewer::resized() {
   auto *display = Desktop::getInstance().getDisplays().getPrimaryDisplay();
-  jassert(display != nullptr);
-
-  float scale = display->scale;
+  float scale = display != nullptr ? static_cast<float>(display->scale) : 1.0f;
   background_ = Image(Image::RGB, scale * getWidth(), scale * getHeight(), true);
   resetWavePath();
 }
@@ -269,9 +267,7 @@ void WaveViewer::resetWavePath() {
     drawSmoothRandom();
 
   auto *display = Desktop::getInstance().getDisplays().getPrimaryDisplay();
-  jassert(display != nullptr);
-
-  float scale = display->scale;
+  float scale = display != nullptr ? static_cast<float>(display->scale) : 1.0f;
   Graphics g(background_);
   g.addTransform(AffineTransform::scale(scale, scale));
   paintBackground(g);

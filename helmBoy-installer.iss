@@ -1,4 +1,4 @@
-#define MyAppVersion "1.1.0"
+#define MyAppVersion "1.1.1"
 
 [Setup]
 AppName=HelmBoy Synthesizer
@@ -30,19 +30,24 @@ PrivilegesRequired=lowest
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Types]
-Name: "full"; Description: "Installation complte"
-Name: "custom"; Description: "Installation personnalise"; Flags: iscustom
+Name: "full"; Description: "Complete Installation"
+Name: "factoryOnly"; Description: "Factory Patches Only Installation"
+Name: "custom"; Description: "Custom Installation"; Flags: iscustom
 
 [Components]
-Name: "standalone"; Description: "Standalone Application"; Types: full custom
-Name: "vst3"; Description: "VST3 Plugin"; Types: full custom
-Name: "lv2"; Description: "LV2 Plugin"; Types: full custom
-Name: "patches"; Description: "Patches Banks"; Types: full custom
-
+Name: "standalone"; Description: "Standalone Application"; Types: full custom factoryOnly
+Name: "vst3"; Description: "VST3 Plugin"; Types: full custom factoryOnly
+Name: "lv2"; Description: "LV2 Plugin"; Types: full custom factoryOnly
+Name: "patches"; Description: "Patches Banks"; Types: full custom factoryOnly
+Name: "Patches\Factory"; Description: "Factory Patches"; Types: full custom factoryOnly
+Name: "Patches\Supplementary"; Description: "Supplementary Patches"; Types: full custom
+Name: "DevicesProfiles"; Description: "Devices Profiles"; Types: full custom factoryOnly
 [Dirs]
 Name: "{userdocs}\HelmBoy"; Flags: uninsneveruninstall; Check: not IsAdminInstallMode
 Name: "{userdocs}\HelmBoy\Patches"; Flags: uninsneveruninstall; Check: not IsAdminInstallMode
+Name: "{userdocs}\HelmBoy\Devices Profiles"; Flags: uninsneveruninstall; Check: not IsAdminInstallMode
 Name: "{commondocs}\HelmBoy\Patches"; Flags: uninsneveruninstall
+Name: "{commondocs}\HelmBoy\Devices Profiles"; Flags: uninsneveruninstall
 
 [Files]
 ; Application standalone (autonome - aucun DLL externe requis)
@@ -60,8 +65,24 @@ Source: "README.md"; DestDir: "{userdocs}\HelmBoy"; Flags: ignoreversion; Check:
 Source: "COPYING"; DestDir: "{userdocs}\HelmBoy"; Flags: ignoreversion; Check: not IsAdminInstallMode
 
 ; Factory Presets (repertoire public pour les plugins)
-Source: "patches\*"; DestDir: "{commondocs}\HelmBoy\Patches\"; Components: patches; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
-Source: "patches\*"; DestDir: "{userdocs}\HelmBoy\Patches\"; Components: patches; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
+Source: "patches\HelmBoy Factory Presets\*"; DestDir: "{commondocs}\HelmBoy\Patches\HelmBoy Factory Presets"; Components: Patches\Factory; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
+Source: "patches\HelmBoy Factory Presets\*"; DestDir: "{userdocs}\HelmBoy\Patches\HelmBoy Factory Presets"; Components: Patches\Factory; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
+
+Source: "patches\Historical Factory Presets\*"; DestDir: "{commondocs}\HelmBoy\Patches\Historical Factory Presets"; Components: Patches\Factory; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
+Source: "patches\Historical Factory Presets\*"; DestDir: "{userdocs}\HelmBoy\Patches\Historical Factory Presets"; Components: Patches\Factory; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
+
+Source: "patches\Databroth\*"; DestDir: "{commondocs}\HelmBoy\Patches\Databroth"; Components: Patches\Supplementary; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
+Source: "patches\Databroth\*"; DestDir: "{userdocs}\HelmBoy\Patches\Databroth"; Components: Patches\Supplementary; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
+
+Source: "patches\Sonic Sirius\*"; DestDir: "{commondocs}\HelmBoy\Patches\Sonic Sirius"; Components: Patches\Supplementary; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
+Source: "patches\Sonic Sirius\*"; DestDir: "{userdocs}\HelmBoy\Patches\Sonic Sirius"; Components: Patches\Supplementary; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
+
+Source: "patches\TSL\*"; DestDir: "{commondocs}\HelmBoy\Patches\TSL"; Components: Patches\Supplementary; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
+Source: "patches\TSL\*"; DestDir: "{userdocs}\HelmBoy\Patches\TSL"; Components: Patches\Supplementary; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
+
+Source: "Devices Profiles\*"; DestDir: "{commondocs}\HelmBoy\Devices Profiles"; Components: DevicesProfiles; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
+Source: "Devices Profiles\*"; DestDir: "{userdocs}\HelmBoy\Devices Profiles"; Components: DevicesProfiles; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
+
 
 [Icons]
 Name: "{group}\HelmBoy Synthesizer"; Filename: "{app}\HelmBoy.exe"; Components: standalone
