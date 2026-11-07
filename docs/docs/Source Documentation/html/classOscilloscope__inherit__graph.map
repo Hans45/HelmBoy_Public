@@ -1,0 +1,7 @@
+<map id="Oscilloscope" name="Oscilloscope">
+<area shape="rect" id="Node000001" title="Real&#45;time audio waveform visualization component." alt="" coords="5,123,182,512"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="12,5,90,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,87,66,123,61,123,59,92"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="115,5,158,75"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,87,126,123,121,122,128,92"/>
+</map>

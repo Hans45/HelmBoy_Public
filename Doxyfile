@@ -350,8 +350,7 @@ PREDEFINED             = HELM_LV2GEN_FACTORY_PRESET_PATH \
                          JUCE_MODULE_AVAILABLE_juce_events=1 \
                          JUCE_MODULE_AVAILABLE_juce_graphics=1 \
                          JUCE_MODULE_AVAILABLE_juce_gui_basics=1 \
-                         JUCE_MODULE_AVAILABLE_juce_gui_extra=1 \
-                         JUCE_MODULE_AVAILABLE_juce_opengl=1
+                         JUCE_MODULE_AVAILABLE_juce_gui_extra=1
 EXPAND_AS_DEFINED      =
 SKIP_FUNCTION_MACROS   = YES
 

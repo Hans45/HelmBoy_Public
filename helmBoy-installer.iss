@@ -1,4 +1,4 @@
-#define MyAppVersion "1.1.1"
+#define MyAppVersion "1.1.2"
 
 [Setup]
 AppName=HelmBoy Synthesizer
@@ -21,6 +21,7 @@ SetupIconFile=images\inno setup graphics\helmBoy.ico
 Compression=lzma2/ultra64
 SolidCompression=yes
 WizardImageFile=images\inno setup graphics\helmBoy_wizard.png
+WizardImageFileDynamicDark=images\inno setup graphics\helmBoy_wizard.png
 WizardStyle=modern dynamic windows11
 ArchitecturesInstallIn64BitMode=x64compatible
 ArchitecturesAllowed=x64compatible
@@ -70,6 +71,9 @@ Source: "patches\HelmBoy Factory Presets\*"; DestDir: "{userdocs}\HelmBoy\Patche
 
 Source: "patches\Historical Factory Presets\*"; DestDir: "{commondocs}\HelmBoy\Patches\Historical Factory Presets"; Components: Patches\Factory; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
 Source: "patches\Historical Factory Presets\*"; DestDir: "{userdocs}\HelmBoy\Patches\Historical Factory Presets"; Components: Patches\Factory; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
+
+Source: "patches\Generated\*"; DestDir: "{commondocs}\HelmBoy\Patches\Generated"; Components: Patches\Factory; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
+Source: "patches\Generated\*"; DestDir: "{userdocs}\HelmBoy\Patches\Generated"; Components: Patches\Factory; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
 
 Source: "patches\Databroth\*"; DestDir: "{commondocs}\HelmBoy\Patches\Databroth"; Components: Patches\Supplementary; Flags: ignoreversion recursesubdirs createallsubdirs; Check: IsAdminInstallMode
 Source: "patches\Databroth\*"; DestDir: "{userdocs}\HelmBoy\Patches\Databroth"; Components: Patches\Supplementary; Flags: ignoreversion recursesubdirs createallsubdirs; Check: not IsAdminInstallMode
